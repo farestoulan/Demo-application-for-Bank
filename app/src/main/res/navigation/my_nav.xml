@@ -13,8 +13,13 @@
             android:id="@+id/action_logInFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_logInFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_logInFragment_to_employeeHome"
+            app:destination="@id/employeeHome" />
+        <action
+            android:id="@+id/action_logInFragment_to_clientHome"
+            app:destination="@id/clientHome" />
+
+
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -24,10 +29,71 @@
         <action
             android:id="@+id/action_registerFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_personalInformation"
+            app:destination="@id/personalInformation" />
+        <action
+            android:id="@+id/action_registerFragment_to_additionalInformations"
+            app:destination="@id/additionalInformations" />
+
     </fragment>
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.roomapp.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/personalInformation"
+        android:name="com.example.roomapp.fragments.add.PersonalInformation"
+        android:label="fragment_personal_information"
+        tools:layout="@layout/fragment_personal_information" >
+        <action
+            android:id="@+id/action_personalInformation_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <argument
+            android:name="password"
+            app:argType="string"
+            app:nullable="true"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/additionalInformations"
+        android:name="com.example.roomapp.fragments.add.AdditionalInformations"
+        android:label="fragment_additional_informations"
+        tools:layout="@layout/fragment_additional_informations" >
+        <action
+            android:id="@+id/action_additionalInformations_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <argument
+            android:name="clientName"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <argument
+            android:name="clientEmail"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <argument
+            android:name="clientPassword"
+            app:argType="string"
+            app:nullable="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeHome"
+        android:name="com.example.roomapp.EmployeeHome"
+        android:label="fragment_employee_home"
+        tools:layout="@layout/fragment_employee_home" />
+    <fragment
+        android:id="@+id/clientHome"
+        android:name="com.example.roomapp.ClientHome"
+        android:label="fragment_client_home"
+        tools:layout="@layout/fragment_client_home" />
 </navigation>

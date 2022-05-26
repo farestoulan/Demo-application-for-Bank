@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_Register"
         android:layout_width="210dp"
         android:layout_height="450dp"
         android:background="@drawable/ic_register_bg"
@@ -38,18 +38,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view">
-
-        <Button
-            android:id="@+id/btnLogRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/btn_top"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:text="Login"
-            android:textColor="@android:color/white"
-            android:textSize="18sp" />
 
     </RelativeLayout>
 
@@ -88,10 +76,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="6dp"
                 android:paddingStart="6dp"
+                app:helperText=""
+                app:helperTextTextColor="@android:color/holo_red_dark"
                 android:paddingEnd="6dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -105,16 +96,19 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="24dp"
                 android:paddingStart="6dp"
                 android:paddingEnd="6dp"
+                app:helperText=""
+                app:helperTextTextColor="@android:color/holo_red_dark"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_PasswordRegister"
+                    android:id="@+id/etPasswordRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_lock"
@@ -131,7 +125,8 @@
                 <RadioButton
                     android:id="@+id/radioB_Employee"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
+                    android:checked="true"
                     android:fontFamily="sans-serif-black"
                     android:text="Employee"
                     android:textSize="16sp" />
@@ -139,7 +134,7 @@
                 <RadioButton
                     android:id="@+id/radioB_Client"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:fontFamily="sans-serif-black"
                     android:text="Client"
                     android:textSize="16sp" />
@@ -150,19 +145,35 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btn_SaveRegister1"
+        android:id="@+id/btn_SubmitRegester"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:background="@drawable/login_btn_bg"
-        android:text="Register"
+        android:text="Submit"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintVertical_bias="0.542" />
+
+    <Button
+        android:id="@+id/btnLogRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/btn_top"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

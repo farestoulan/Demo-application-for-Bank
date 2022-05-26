@@ -4,15 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInFragment">
+    tools:context=".fragments.add.AdditionalInformations">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_Additional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text=" Login"
-        android:textColor="#031FBD"
+        android:text="Additional Information"
+        android:textColor="#082AE8"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,39 +20,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_Additional"
         android:layout_width="210dp"
         android:layout_height="450dp"
-        android:background="@drawable/ic_login_bg"
+        android:background="@drawable/ic_register_bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view">
 
-        <Button
-            android:id="@+id/btnRegLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/btn_top"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:text="Register"
-            android:textColor="@android:color/white"
-            android:textSize="18sp" />
-
-    </RelativeLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -62,7 +38,7 @@
         android:layout_marginEnd="24dp"
         app:cardCornerRadius="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -71,57 +47,53 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/emailContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="6dp"
-                android:paddingStart="6dp"
-                app:helperText=""
-                app:helperTextTextColor="@android:color/holo_red_dark"
-                android:paddingEnd="6dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_EmailLogin"
-                    android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Credit Type"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/list_CreditType"
+                    android:layout_width="348dp"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_email"
-                    android:drawablePadding="6dp"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress" />
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="24dp"
                 android:paddingStart="6dp"
                 android:paddingEnd="6dp"
+                android:maxLength="6"
                 app:helperText=""
-                app:helperTextTextColor="@android:color/holo_red_dark"
-                app:passwordToggleEnabled="true">
+                app:helperTextTextColor="@android:color/holo_red_dark">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_Passwordlogin"
+                    android:id="@+id/et_Job"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_lock"
                     android:drawablePadding="6dp"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
+                    android:hint="Job"/>
             </com.google.android.material.textfield.TextInputLayout>
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_RegisterAdditional"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="168dp"
+        android:layout_marginBottom="116dp"
         android:background="@drawable/login_btn_bg"
-        android:text="Login"
+        android:text="Register"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -130,6 +102,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.573" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

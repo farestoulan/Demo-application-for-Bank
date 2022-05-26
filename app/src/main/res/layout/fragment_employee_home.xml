@@ -3,24 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#27716A"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
-
+    android:background="#FF9800"
+    tools:context=".EmployeeHome">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="329dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="200dp"
+        android:layout_width="369dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Welcome Bank"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
+        android:text="This Employee"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.332" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

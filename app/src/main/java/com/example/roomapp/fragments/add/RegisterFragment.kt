@@ -1,27 +1,24 @@
 package com.example.roomapp.fragments.add
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.Switch
+import android.widget.EditText
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
-import com.example.roomapp.data.User
-import com.example.roomapp.data.UserViewModel
 import com.example.roomapp.databinding.FragmentRegisterBinding
-import kotlinx.android.synthetic.main.fragment_register.*
-import kotlinx.android.synthetic.main.fragment_register.view.*
+
 
 class RegisterFragment : Fragment() {
     var isClient: Boolean = false
-    private lateinit var mUserViewModel: UserViewModel
+
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
@@ -33,58 +30,116 @@ class RegisterFragment : Fragment() {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        emailFocusListener()
+        passwordFocusListener()
+
+
+        binding.btnSubmitRegester.setOnClickListener {
+            val name = binding.etNameRegister.text.toString()
+            val email = binding.etEmailRegister.text.toString()
+            val password = binding.etPasswordRegister.text.toString()
+            if (inputCheck(name, email, password)) {
+                val checkedTypeUser = binding.RadioGDataTaype.checkedRadioButtonId
+                onRadioButtonClicked(checkedTypeUser)
+                if (isClient) {
+                    val action =
+                        RegisterFragmentDirections.actionRegisterFragmentToAdditionalInformations(
+                            name,
+                            email,
+                            password
+                        )
+
+                    findNavController().navigate(action)
+
+
+                } else {
+                    val action =
+                        RegisterFragmentDirections.actionRegisterFragmentToPersonalInformation(
+                            name,
+                            email,
+                            password
+                        )
+                    findNavController().navigate(action)
+
+
+                }
+            } else {
+                Toast.makeText(requireContext(), "Invalid.", Toast.LENGTH_LONG).show()
+
+            }
+
+        }
         binding.btnLogRegister.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_logInFragment)
+
         }
 
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-
-
-        binding.btnSaveRegister1.setOnClickListener {
-            val checkedTypeUser = binding.RadioGDataTaype.checkedRadioButtonId
-            onRadioButtonClicked(checkedTypeUser)
-
-            insertDataToDatabase()
-        }
 
         return view
     }
 
-    private fun insertDataToDatabase() {
-        val name = et_NameRegister.text.toString()
-        val email = et_EmailRegister.text.toString()
-        val password = et_PasswordRegister.text
-
-        if (inputCheck(name, email, password!!)) {
-            // Create User Object
-            val user = User(0, name, email, Integer.parseInt(password.toString()), isClient)
-            // Add Data to Database
-            mUserViewModel.addUser(user)
-            Toast.makeText(requireContext(), "Successfully login!", Toast.LENGTH_LONG).show()
-            // Navigate Back
-            findNavController().navigate(R.id.action_registerFragment_to_logInFragment)
-        } else {
-            Toast.makeText(requireContext(), "Invalid.", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun inputCheck(name: String, email: String, password: Editable): Boolean {
+    private fun inputCheck(
+        name: String, email: String, password: String
+    ): Boolean {
         return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(email) && password.isEmpty())
+
     }
 
 
     fun onRadioButtonClicked(checkedId: Int) {
-
-
         when (checkedId) {
             R.id.radioB_Employee ->
 
                 isClient = false
 
+
             R.id.radioB_Client ->
 
                 isClient = true
         }
+    }
+
+
+    private fun emailFocusListener() {
+        binding.etEmailRegister.setOnFocusChangeListener { _, focused ->
+            if (!focused) {
+                binding.emailContainer.helperText = validEmail()
+            }
+        }
+    }
+
+    private fun validEmail(): String? {
+        val emailText = binding.etEmailRegister.text.toString()
+        if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()) {
+            return "Invalid Email Address"
+        }
+        return null
+    }
+
+    private fun passwordFocusListener() {
+        binding.etPasswordRegister.setOnFocusChangeListener { _, focused ->
+            if (!focused) {
+                binding.passwordContainer.helperText = validPassword()
+            }
+        }
+    }
+
+    private fun validPassword(): String? {
+        val passwordText = binding.etPasswordRegister.text.toString()
+        if (passwordText.length < 8) {
+            return "Minimum 8 Character Password"
+        }
+        if (!passwordText.matches(".*[A-Z].*".toRegex())) {
+            return "Must Contain 1 Upper-case Character"
+        }
+        if (!passwordText.matches(".*[a-z].*".toRegex())) {
+            return "Must Contain 1 Lower-case Character"
+        }
+        if (!passwordText.matches(".*[@#\$%^&+=].*".toRegex())) {
+            return "Must Contain 1 Special Character (@#\$%^&+=)"
+        }
+
+        return null
     }
 }
 
