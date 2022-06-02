@@ -90,10 +90,56 @@
         android:id="@+id/employeeHome"
         android:name="com.example.roomapp.EmployeeHome"
         android:label="fragment_employee_home"
-        tools:layout="@layout/fragment_employee_home" />
+        tools:layout="@layout/fragment_employee_home" >
+        <action
+            android:id="@+id/action_employeeHome_to_depositAccess"
+            app:destination="@id/depositAccess" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+
+    </fragment>
     <fragment
         android:id="@+id/clientHome"
         android:name="com.example.roomapp.ClientHome"
         android:label="fragment_client_home"
-        tools:layout="@layout/fragment_client_home" />
+        tools:layout="@layout/fragment_client_home" >
+        <action
+            android:id="@+id/action_clientHome_to_withdraw"
+            app:destination="@id/withdraw" />
+        <action
+            android:id="@+id/action_clientHome_to_deposit"
+            app:destination="@id/deposit" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/withdraw"
+        android:name="com.example.roomapp.Withdraw"
+        android:label="fragment_withdraw"
+        tools:layout="@layout/fragment_withdraw" />
+    <fragment
+        android:id="@+id/deposit"
+        android:name="com.example.roomapp.Deposit"
+        android:label="fragment_deposit"
+        tools:layout="@layout/fragment_deposit" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/depositAccess"
+        android:name="com.example.roomapp.DepositAccess"
+        android:label="fragment_deposit_access"
+        tools:layout="@layout/fragment_deposit_access" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+    </fragment>
 </navigation>

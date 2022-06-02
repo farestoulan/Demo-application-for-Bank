@@ -11,9 +11,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.data.UserDatabase
 import com.example.roomapp.databinding.FragmentLogInBinding
+import com.example.roomapp.fragments.add.RegisterFragmentDirections
 
 
 class LogInFragment : Fragment() {
+
     private var _binding: FragmentLogInBinding? = null
     private val binding get() = _binding!!
 
@@ -36,7 +38,9 @@ class LogInFragment : Fragment() {
 
         binding.btnLogin.setOnClickListener {
 
+
             getData(email.text.toString(), password.text.toString())
+
         }
         return view
 
@@ -48,8 +52,12 @@ class LogInFragment : Fragment() {
 
         if (loginData.isNotEmpty()) {
             val checkTypeUser = loginData.get(0).isClient
+           val  id = loginData.get(0).id
+
             if (checkTypeUser == true) {
-                findNavController().navigate(R.id.action_logInFragment_to_clientHome)
+                val action =
+                    LogInFragmentDirections.actionLogInFragmentToClientHome(id)
+                findNavController().navigate(action)
 
             } else {
 

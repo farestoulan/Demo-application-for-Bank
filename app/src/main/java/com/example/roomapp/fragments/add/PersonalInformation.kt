@@ -13,8 +13,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
 import com.example.roomapp.data.Employee
 import com.example.roomapp.data.User
+import com.example.roomapp.data.UserDao
 import com.example.roomapp.data.ViewModel
 import com.example.roomapp.databinding.FragmentPersonalInformationBinding
+import java.util.*
+import kotlin.concurrent.schedule
 
 
 class PersonalInformation : Fragment() {
@@ -22,6 +25,7 @@ class PersonalInformation : Fragment() {
     var emailData: String = ""
     var passwordData: String = ""
     var isClient: Boolean = false
+
 
     private lateinit var pViewModel: ViewModel
 
@@ -51,8 +55,10 @@ class PersonalInformation : Fragment() {
         binding.listPosition.setAdapter(arrayAdapter)
 
         binding.btnRegisterPersonal.setOnClickListener {
-            insertDataToUserinDatabase()
-            insertDataToEmployeeinDatabase()
+            val guserId = insertDataToUserinDatabase()
+            insertDataToEmployeeinDatabase(guserId)
+
+
         }
 
         return view
@@ -66,15 +72,17 @@ class PersonalInformation : Fragment() {
     }
 
     //insert Data to Employee Entity
-    private fun insertDataToEmployeeinDatabase() {
+    private fun insertDataToEmployeeinDatabase(guserid: Long) {
 
         val position = binding.listPosition.text.toString()
         val experience = binding.etExperience.text.toString()
 
+
+
         if (inputCheck(position, experience)) {
             // Create employee Object
             val employee = Employee(
-                0, position, experience
+                0, position, experience, guserid
             )
             // Add Data to Database
             pViewModel.addPersonalInformation(employee)
@@ -95,18 +103,27 @@ class PersonalInformation : Fragment() {
 
 
     //insert Data to User Entity
-    private fun insertDataToUserinDatabase() {
+    private fun insertDataToUserinDatabase(): Long {
 
         // Create user Object
         val user = User(
             0, nameData, emailData, passwordData, isClient
         )
         // Add Data to Database
-        pViewModel.addUser(user)
+        var gUserId = pViewModel.addUser(user)
         Toast.makeText(requireContext(), "Successfully login Employee!", Toast.LENGTH_LONG).show()
 
 
+        return gUserId
     }
+
+//    private fun validationExperince():String?{
+//        val positionText= binding.listPosition.text.toString()
+//        val experince =binding.etExperience
+//        if (){}
+//
+//       return null
+//    }
 }
 
 

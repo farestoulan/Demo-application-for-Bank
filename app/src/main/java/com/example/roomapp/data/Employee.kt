@@ -9,7 +9,10 @@ data class Employee(
     val id: Int,
 
     val position:String,
-    val experience:String)
+    val experience:String,
+    val user_ID:Long
+
+    )
 
 
 

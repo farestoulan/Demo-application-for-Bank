@@ -11,19 +11,19 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
-import com.example.roomapp.data.ClientEntity
-import com.example.roomapp.data.Employee
-import com.example.roomapp.data.User
-import com.example.roomapp.data.ViewModel
+import com.example.roomapp.data.*
 import com.example.roomapp.databinding.FragmentAdditionalInformationsBinding
 import com.example.roomapp.databinding.FragmentPersonalInformationBinding
+import com.example.roomapp.data.UserDao as UserDao1
 
 class AdditionalInformations : Fragment() {
+
 
     var nameData: String = ""
     var emailData: String = ""
     var passwordData: String = ""
     var isClient: Boolean = true
+    var relation :Int=0
     private lateinit var aViewModel: ViewModel
 
 
@@ -50,8 +50,9 @@ class AdditionalInformations : Fragment() {
             AdditionalInformationsArgs.fromBundle(requireArguments()).clientPassword.toString()
 
         binding.btnRegisterAdditional.setOnClickListener {
-            insertDataToUserinDatabase()
-            insertDataToDatabase()
+
+          val guserId=  insertDataToUserinDatabase()
+            insertDataToDatabase(guserId)
 
         }
 
@@ -66,15 +67,15 @@ class AdditionalInformations : Fragment() {
     }
 
     //insert Data to User Entity
-    private fun insertDataToDatabase() {
+    private fun insertDataToDatabase( guserid:Long)  {
         val creditType = binding.listCreditType.text.toString()
         val job = binding.etJob.text.toString()
+
+
+
         if (inputCheck(creditType, job)) {
             // Create User Object
-            val client = ClientEntity(
-                0,
-                creditType, job
-            )
+            val client = ClientEntity(0, creditType, job,guserid )
             // Add Data to Database
             aViewModel.addAdditionalInformation(client)
             Toast.makeText(requireContext(), "Successfully login!", Toast.LENGTH_LONG).show()
@@ -95,17 +96,20 @@ class AdditionalInformations : Fragment() {
 
 
     //insert Data to User Entity
-    private fun insertDataToUserinDatabase() {
+    private fun insertDataToUserinDatabase() :Long{
+
 
         // Create user Object
         val user = User(
             0, nameData, emailData, passwordData, isClient
         )
         // Add Data to Database
-        aViewModel.addUser(user)
-        Toast.makeText(requireContext(), "Successfully login Client!", Toast.LENGTH_LONG).show()
+        var gUserId =  aViewModel.addUser(user)
+
+        Toast.makeText(requireContext(), "Successfully  Client!", Toast.LENGTH_LONG).show()
 
 
+       return gUserId
     }
 
 

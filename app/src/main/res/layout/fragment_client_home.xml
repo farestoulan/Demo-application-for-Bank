@@ -4,23 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#05A394"
+    android:background="#079789"
     tools:context=".ClientHome">
 
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="369dp"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="26dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="This Clint"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Withdraw"
+        android:layout_width="137dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="24dp"
+        android:background="#FF5722"
+        android:fontFamily="sans-serif-black"
+        android:text="Withdraw"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Deposit"
+        android:layout_width="153dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Deposit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Withdraw"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
