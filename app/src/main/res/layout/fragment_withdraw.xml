@@ -5,15 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#079789"
-    tools:context=".Withdraw">
+    tools:context=".withDraw_Fragment.Withdraw">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="282dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Welcome to the bank Withdraw"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_BalanceAmount"
+        android:layout_width="241dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="92dp"
+        android:fontFamily="sans-serif-black"
+        android:hint="Balance amount"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/et_withdraw"
         android:layout_width="281dp"
         android:layout_height="55dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="186dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:fontFamily="sans-serif-black"
@@ -21,8 +46,9 @@
         android:inputType="number"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_BalanceAmount" />
 
     <Button
         android:id="@+id/btn_SubmitWithdraw"
@@ -34,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_withdraw"
-        app:layout_constraintVertical_bias="0.298" />
+        app:layout_constraintVertical_bias="0.407" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

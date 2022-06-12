@@ -10,11 +10,11 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.roomapp.entitys.ClientEntity
+import com.example.roomapp.entitys.User
 import com.example.roomapp.R
-import com.example.roomapp.data.*
+import com.example.roomapp.viewModel.ViewModel
 import com.example.roomapp.databinding.FragmentAdditionalInformationsBinding
-import com.example.roomapp.databinding.FragmentPersonalInformationBinding
-import com.example.roomapp.data.UserDao as UserDao1
 
 class AdditionalInformations : Fragment() {
 
@@ -23,7 +23,7 @@ class AdditionalInformations : Fragment() {
     var emailData: String = ""
     var passwordData: String = ""
     var isClient: Boolean = true
-    var relation :Int=0
+
     private lateinit var aViewModel: ViewModel
 
 
@@ -75,7 +75,7 @@ class AdditionalInformations : Fragment() {
 
         if (inputCheck(creditType, job)) {
             // Create User Object
-            val client = ClientEntity(0, creditType, job,guserid )
+            val client = ClientEntity(0,0, creditType, job,guserid )
             // Add Data to Database
             aViewModel.addAdditionalInformation(client)
             Toast.makeText(requireContext(), "Successfully login!", Toast.LENGTH_LONG).show()

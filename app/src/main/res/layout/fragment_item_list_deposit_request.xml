@@ -4,49 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ItemListDepositRequest">
+    tools:context=".fragments.add.ItemListDepositRequest">
 
 
     <TextView
         android:id="@+id/tv_Name"
-        android:layout_width="407dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="2dp"
+        android:layout_width="332dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Name"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Currency"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_Currency"
-        android:layout_width="404dp"
-        android:layout_height="59dp"
+        android:layout_width="329dp"
+        android:layout_height="51dp"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
         android:fontFamily="sans-serif-black"
         android:text="The Currency"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Name" />
 
     <TextView
         android:id="@+id/tv_Deposit"
-        android:layout_width="395dp"
-        android:layout_height="73dp"
+        android:layout_width="318dp"
+        android:layout_height="51dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="sans-serif-black"
         android:text="Number of deposit"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Currency" />
 
@@ -55,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="28dp"
         android:fontFamily="sans-serif-black"
         android:text="Reject"
         android:textSize="20sp"
@@ -71,8 +75,20 @@
         android:text="Acciept"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_Reject"
-        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Deposit" />
+
+    <Button
+        android:id="@+id/btnWatting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Watting"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Reject"
+        app:layout_constraintStart_toEndOf="@+id/btn_Acciept"
         app:layout_constraintTop_toBottomOf="@+id/tv_Deposit" />
 
 

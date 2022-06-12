@@ -4,9 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.roomapp.dao.*
+import com.example.roomapp.entitys.*
 
 @Database(
-    entities = [User::class, ClientEntity::class, Employee::class,DepositEntity::class],
+    entities = [User::class, ClientEntity::class, Employee::class, DepositEntity::class , Withdraw::class],
     version = 1,
     exportSchema = false
 )
@@ -17,6 +19,7 @@ abstract class UserDatabase : RoomDatabase() {
     abstract fun employeeDao(): EmployeeDao
     abstract fun clientDao(): ClientDao
     abstract fun depositDao(): DepositDao
+    abstract fun withdrawDao():WithdrawDAO
 
     companion object {
         @Volatile

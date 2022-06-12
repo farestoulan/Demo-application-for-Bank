@@ -8,6 +8,7 @@
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_add.xml" value="0.1" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_baseline_sentiment_satisfied_alt_24.xml" value="0.1135" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_email.xml" value="0.1" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_login_bg.xml" value="0.1" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/drawable/ic_person.xml" value="0.1" />
@@ -21,18 +22,22 @@
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_add.xml" value="0.15" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_additional_informations.xml" value="0.25" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_client.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_client_home.xml" value="0.25" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_client_home.xml" value="0.22" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_deposit.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_deposit_access.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_drop_down__item.xml" value="0.2" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_employee_history.xml" value="0.1921875" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_employee_home.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_home.xml" value="0.17" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_item_list_deposit_request.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_item_list_history.xml" value="0.178125" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_item_list_withdraw.xml" value="0.178125" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_log_in.xml" value="0.18" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_login.xml" value="0.1" />
-        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_personal_information.xml" value="0.15" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_personal_information.xml" value="0.18" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_withdraw.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/fragment_withdraw_access.xml" value="0.1921875" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/nav_header.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/layout/toolbar.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/Fares.Ismail/AndroidStudioProjects/RoomApp - Part 2 - Insert Data/RoomApp/app/src/main/res/menu/nav_drawer_menu.xml" value="0.18697916666666667" />

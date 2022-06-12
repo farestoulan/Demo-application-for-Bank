@@ -6,7 +6,7 @@
     android:id="@+id/drawerLayout"
     tools:openDrawer="start"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".home.MainActivity">
 
 
     <androidx.fragment.app.FragmentContainerView

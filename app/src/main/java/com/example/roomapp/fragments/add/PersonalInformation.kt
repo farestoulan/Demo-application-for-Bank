@@ -11,13 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
-import com.example.roomapp.data.Employee
-import com.example.roomapp.data.User
-import com.example.roomapp.data.UserDao
-import com.example.roomapp.data.ViewModel
+import com.example.roomapp.entitys.Employee
+import com.example.roomapp.entitys.User
+import com.example.roomapp.viewModel.ViewModel
 import com.example.roomapp.databinding.FragmentPersonalInformationBinding
-import java.util.*
-import kotlin.concurrent.schedule
 
 
 class PersonalInformation : Fragment() {
