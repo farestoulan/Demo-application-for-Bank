@@ -1,4 +1,4 @@
-package com.example.roomapp.adaptery
+package com.example.roomapp.adapteryDeposit
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomapp.R
-import com.example.roomapp.dao.DepositDao.BalanceAmountCreditTypes
+import com.example.roomapp.daoDeposit.DepositDao.BalanceAmountCreditTypes
 
 class Adapter(private val mContext: Context, mData: MutableList<BalanceAmountCreditTypes?>?) :
     RecyclerView.Adapter<Adapter.MyViewHolder>() {
@@ -73,6 +73,7 @@ class Adapter(private val mContext: Context, mData: MutableList<BalanceAmountCre
             acciept = itemView.findViewById(R.id.btn_Acciept)
             reject = itemView.findViewById(R.id.btn_Reject)
             watting =itemView.findViewById(R.id.btnWatting)
+
         }
     }
 

@@ -4,63 +4,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#079789"
+    android:background="@drawable/deposit"
     tools:context=".withDraw_Fragment.Withdraw">
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="282dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="84dp"
+        android:id="@+id/tvWelcomeWithdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-black"
-        android:text="Welcome to the bank Withdraw"
-        android:textSize="20sp"
+        android:gravity="center"
+        android:text="@string/welcome_bank_withdraw"
+        android:textColor="#0357AE"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_BalanceAmount"
-        android:layout_width="241dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="92dp"
-        android:fontFamily="sans-serif-black"
-        android:hint="Balance amount"
-        android:textSize="20sp"
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="#63ABCD"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeWithdraw">
 
-    <EditText
-        android:id="@+id/et_withdraw"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-black"
-        android:hint="Input Withdraw"
-        android:inputType="number"
-        android:textSize="20sp"
+        <TextView
+            android:id="@+id/tv_BalanceAmountWithdraw"
+            android:layout_width="147dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:hint="@string/balance_amount"
+            android:textColor="#0E5AA6"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="149dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="29dp"
+            android:layout_toStartOf="@+id/tv_BalanceAmountWithdraw"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/balance_amount"
+            android:textColor="#0E5AA6"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="#63ABCD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_BalanceAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
 
-    <Button
-        android:id="@+id/btn_SubmitWithdraw"
-        android:layout_width="167dp"
-        android:layout_height="64dp"
-        android:text="Submit"
-        android:textSize="20sp"
+        <TextView
+            android:id="@+id/tvCurrentBalanceAmountWithdraw"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:textColor="#0E5AA6"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="261dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="43dp"
+            android:layout_toStartOf="@+id/tvCurrentBalanceAmountWithdraw"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/discount_after_acceptance"
+            android:textColor="#0E5AA6"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="371dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_withdraw"
-        app:layout_constraintVertical_bias="0.407" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_top"
+            android:backgroundTint="#63ABCD"
+            >
+
+
+            <EditText
+                android:id="@+id/et_Withdraw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etMoneySource"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/hint_input_Withdraw"
+                android:inputType="number"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.434"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_SubmitWithdraw"
+                android:layout_width="191dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/et_Withdraw"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="87dp"
+                android:layout_marginBottom="21dp"
+                android:background="@drawable/btn_top"
+                android:text="@string/btn_submit"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_Withdraw" />
+
+            <EditText
+                android:id="@+id/etMoneySource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="23dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/hint_money_source"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

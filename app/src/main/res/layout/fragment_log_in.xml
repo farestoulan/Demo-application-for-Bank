@@ -8,19 +8,20 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text=" Login"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="@string/title_login"
         android:textColor="#031FBD"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.97" />
 
     <View
         android:id="@+id/view"
@@ -52,7 +53,7 @@
             android:background="@drawable/btn_top"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:text="Register"
+            android:text="@string/btn_register"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
@@ -73,7 +74,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailContainer"
@@ -81,9 +83,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="6dp"
                 android:paddingStart="6dp"
+                android:paddingEnd="6dp"
                 app:helperText=""
-                app:helperTextTextColor="@android:color/holo_red_dark"
-                android:paddingEnd="6dp">
+                app:helperTextTextColor="@android:color/holo_red_dark">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_EmailLogin"
@@ -91,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_email"
                     android:drawablePadding="6dp"
-                    android:hint="Email"
+                    android:hint="@string/hint_email"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_lock"
                     android:drawablePadding="6dp"
-                    android:hint="Password"
+                    android:hint="@string/hint_password"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -125,9 +127,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="168dp"
         android:background="@drawable/login_btn_bg"
-        android:text="Login"
+        android:text="@string/btn_login"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -30,10 +30,18 @@ class EmployeeHome : Fragment() {
         binding.btnWithdrawAccess.setOnClickListener {
             findNavController().navigate(R.id.action_employeeHome_to_withdrawAccess)
         }
-        binding.btnHistory.setOnClickListener {
+        binding.btnHistoryDeposit.setOnClickListener {
             findNavController().navigate(R.id.action_employeeHome_to_employeeHistory)
         }
+        binding.btnHistoryWithdraw.setOnClickListener {
+            findNavController().navigate(R.id.action_employeeHome_to_employeeHistoryWithdraw)
+        }
         return view
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 

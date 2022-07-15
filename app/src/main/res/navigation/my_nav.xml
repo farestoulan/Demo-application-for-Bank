@@ -104,6 +104,9 @@
         <action
             android:id="@+id/action_employeeHome_to_employeeHistory"
             app:destination="@id/employeeHistory" />
+        <action
+            android:id="@+id/action_employeeHome_to_employeeHistoryWithdraw"
+            app:destination="@id/employeeHistoryWithdraw" />
 
     </fragment>
     <fragment
@@ -111,12 +114,14 @@
         android:name="com.example.roomapp.home.ClientHome"
         android:label="fragment_client_home"
         tools:layout="@layout/fragment_client_home" >
+
+
         <action
-            android:id="@+id/action_clientHome_to_withdraw"
-            app:destination="@id/withdraw" />
+            android:id="@+id/action_clientHome_to_depositStatus"
+            app:destination="@id/depositStatus" />
         <action
-            android:id="@+id/action_clientHome_to_deposit"
-            app:destination="@id/deposit" />
+            android:id="@+id/action_clientHome_to_withdrawStatus"
+            app:destination="@id/withdrawStatus" />
 
 
     </fragment>
@@ -125,9 +130,11 @@
         android:name="com.example.roomapp.withDraw_Fragment.Withdraw"
         android:label="fragment_withdraw"
         tools:layout="@layout/fragment_withdraw" >
+
+
         <action
-            android:id="@+id/action_withdraw_to_clientHome"
-            app:destination="@id/clientHome" />
+            android:id="@+id/action_withdraw_to_withdrawStatus"
+            app:destination="@id/withdrawStatus" />
     </fragment>
     <fragment
         android:id="@+id/deposit"
@@ -153,7 +160,68 @@
         tools:layout="@layout/fragment_withdraw_access" />
     <fragment
         android:id="@+id/employeeHistory"
-        android:name="com.example.roomapp.history.EmployeeHistory"
+        android:name="com.example.roomapp.history.EmployeeHistoryDeposit"
         android:label="fragment_employee_history"
-        tools:layout="@layout/fragment_employee_history" />
+        tools:layout="@layout/fragment_employee_history_deposit" />
+    <fragment
+        android:id="@+id/depositStatus"
+        android:tag="depositStatus54"
+
+        android:name="com.example.roomapp.deposit_Fragment.DepositStatus"
+        android:label="fragment_deposit_status"
+        tools:layout="@layout/fragment_deposit_status" >
+        <action
+            android:id="@+id/action_depositStatus_to_deposit"
+            app:destination="@id/deposit" />
+        <action
+            android:id="@+id/action_depositStatus_to_detailsOfHistoryFragment"
+            app:destination="@id/detailsOfHistoryFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/withdrawStatus"
+        android:name="com.example.roomapp.withDraw_Fragment.WithdrawStatus"
+        android:label="fragment_withdraw_status"
+        tools:layout="@layout/fragment_withdraw_status" >
+        <action
+            android:id="@+id/action_withdrawStatus_to_withdraw"
+            app:destination="@id/withdraw" />
+        <action
+            android:id="@+id/action_withdrawStatus_self"
+            app:destination="@id/withdrawStatus" />
+        <action
+            android:id="@+id/action_withdrawStatus_to_detailsOfHistoryFragment"
+            app:destination="@id/detailsOfHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeHistoryWithdraw"
+        android:name="com.example.roomapp.history.EmployeeHistoryWithdraw"
+        android:label="fragment_employee_history_withdraw"
+        tools:layout="@layout/fragment_employee_history_withdraw" />
+    <fragment
+        android:id="@+id/detailsOfHistoryFragment"
+        android:name="com.example.roomapp.DetailsOfHistoryFragment"
+        android:label="fragment_detalis_of_history"
+        tools:layout="@layout/fragment_detalis_of_history" >
+        <argument
+            android:name="transactionID"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <argument
+            android:name="clientName"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <argument
+            android:name="amountBalance"
+            app:argType="integer"
+            />
+        <argument
+            android:name="employeeName"
+            app:argType="string"
+            app:nullable="true"
+            />
+
+    </fragment>
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.roomapp.dao
+package com.example.roomapp.daoClient
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -22,5 +22,9 @@ interface ClientDao {
     @Query("SELECT   amount_Balance from table_Client where id=:id ")
     fun returnBalance(id: Int): Int
 
+    @Query("UPDATE   table_Client SET pending_Balance = :pendingBalance where id=:id ")
+    fun updatePendingBalance(pendingBalance:Int,   id: Int): Int
 
+    @Query("SELECT   pending_Balance from table_Client where id=:id ")
+    fun returnPendingBalance(id: Int): Int
 }

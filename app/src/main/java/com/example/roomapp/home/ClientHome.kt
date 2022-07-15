@@ -14,8 +14,6 @@ import com.example.roomapp.databinding.FragmentClientHomeBinding
 
 class ClientHome : Fragment() {
     private lateinit var cViewModel: ViewModel
-    var id1 :Int =0
-
     private var _binding: FragmentClientHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -27,20 +25,13 @@ class ClientHome : Fragment() {
         val view = binding.root
         cViewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
-//        Log.i("resurnUserAndClient", "onCreateView:${  cViewModel.returnUserAndClient().size} ")
-//        cViewModel.returnUserAndClient()
-
-
-//        id1 = ClientHomeArgs.fromBundle(requireArguments()).id
-
-
         binding.btnWithdraw.setOnClickListener {
-            findNavController().navigate(R.id.action_clientHome_to_withdraw)
+            findNavController().navigate(R.id.action_clientHome_to_withdrawStatus)
         }
 
         binding.btnDeposit.setOnClickListener {
 
-            findNavController().navigate(R.id.action_clientHome_to_deposit)
+            findNavController().navigate(R.id.action_clientHome_to_depositStatus)
 
         }
 

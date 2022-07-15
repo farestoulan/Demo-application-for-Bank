@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 class ClientEntity (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-
     val amount_Balance :Int,
+    val pending_Balance :String,
     val creditType:String ,
     val job : String,
     val user_ID:Long

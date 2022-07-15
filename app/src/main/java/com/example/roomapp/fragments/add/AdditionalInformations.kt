@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.roomapp.entitys.ClientEntity
 import com.example.roomapp.entitys.User
 import com.example.roomapp.R
+import com.example.roomapp.database.UserDatabase
 import com.example.roomapp.viewModel.ViewModel
 import com.example.roomapp.databinding.FragmentAdditionalInformationsBinding
 
@@ -39,7 +40,7 @@ class AdditionalInformations : Fragment() {
 
         val position = resources.getStringArray(R.array.creditType)
         val arrayAdapter =
-            ArrayAdapter(requireContext(), R.layout.dropdown_item_additional, position)
+            ArrayAdapter(requireContext(), R.layout.dropdown_item, position)
         binding.listCreditType.setAdapter(arrayAdapter)
 
         aViewModel = ViewModelProvider(this).get(ViewModel::class.java)
@@ -68,6 +69,7 @@ class AdditionalInformations : Fragment() {
 
     //insert Data to User Entity
     private fun insertDataToDatabase( guserid:Long)  {
+
         val creditType = binding.listCreditType.text.toString()
         val job = binding.etJob.text.toString()
 
@@ -75,7 +77,7 @@ class AdditionalInformations : Fragment() {
 
         if (inputCheck(creditType, job)) {
             // Create User Object
-            val client = ClientEntity(0,0, creditType, job,guserid )
+            val client = ClientEntity(0,0,"", creditType, job,guserid )
             // Add Data to Database
             aViewModel.addAdditionalInformation(client)
             Toast.makeText(requireContext(), "Successfully login!", Toast.LENGTH_LONG).show()

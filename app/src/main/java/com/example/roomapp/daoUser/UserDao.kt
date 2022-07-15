@@ -1,4 +1,4 @@
-package com.example.roomapp.dao
+package com.example.roomapp.daoUser
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -21,6 +21,9 @@ interface UserDao {
     @Transaction
     @Query("SELECT * FROM  user_table")
     fun getUserAndEmployee(): List<UserAndEmployee>
+
+    @Query("SELECT name  FROM user_table where  id =:id  ")
+    fun returnEmployeeName(  id: Int):String
 
 
 

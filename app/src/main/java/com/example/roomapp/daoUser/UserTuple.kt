@@ -1,4 +1,4 @@
-package com.example.roomapp.dao
+package com.example.roomapp.daoUser
 
 import androidx.room.ColumnInfo
 

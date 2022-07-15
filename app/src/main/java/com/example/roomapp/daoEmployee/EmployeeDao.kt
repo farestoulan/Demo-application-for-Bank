@@ -1,4 +1,4 @@
-package com.example.roomapp.dao
+package com.example.roomapp.daoEmployee
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -16,5 +16,7 @@ interface EmployeeDao {
 
 
 
+    @Query("SELECT id FROM employees where employees.user_ID = (:userFroginid) ")
+    fun returnEmployeeID(userFroginid: Int): Int
 
 }

@@ -6,49 +6,224 @@
     android:layout_height="wrap_content"
     tools:context=".history.ItemListHistory">
 
-    <TextView
-        android:id="@+id/tv_NameHistory"
-        android:layout_width="369dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="2dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Name"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_CurrencyHistory"
-        android:layout_width="361dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="sans-serif-black"
-        android:text="The Currency"
-        android:textSize="20sp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_top"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_NameHistory" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_DepositHistory"
-        android:layout_width="367dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Number of deposit"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_CurrencyHistory" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="326dp"
+            android:background="@drawable/btn_top"
+            android:backgroundTint="#63ABCD">
+
+            <TextView
+                android:id="@+id/tv_TransactionIDHistory"
+                android:layout_width="162dp"
+                android:layout_height="51dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="58dp"
+                android:layout_marginEnd="3dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text="@string/text_name"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_EmployeeNameHistory"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_TransactionIDHistory"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text=""
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_AmountHistory" />
+
+            <TextView
+                android:id="@+id/tv_AmountHistory"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmployeeNamee"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="31dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text="@string/text_number_deposit"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_TransactionIDHistory" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="63dp"
+                android:layout_height="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/deposit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="391dp"
+                android:layout_height="65dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/btn_top"
+                android:backgroundTint="#748DA6">
+
+                <TextView
+                    android:id="@+id/tvRequestDate"
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/text_request_date"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvApprovedDate"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/text_approved_date"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.585"
+                    app:layout_constraintStart_toEndOf="@+id/tvRequestDate" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/text_request_date"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/text_approved_date"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView18"
+
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_number_deposit"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="39dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_currency"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="57dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_name"
+                android:textSize="20sp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:layout_marginTop="19dp"
+                android:text="@string/text_employee_name"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="start"
+                />
+
+            <TextView
+                android:id="@+id/tvEmployeeNamee"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_EmployeeNameHistory"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="11dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

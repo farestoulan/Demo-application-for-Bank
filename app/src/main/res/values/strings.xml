@@ -1,17 +1,103 @@
 <resources>
+    <string name="app_name">Bank</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="app_name">Bank</string>
+
+    //fragment_withdraw_status
+    <string name="balance_amount">Balance Amount :</string>
+    <string name="from">From</string>
+    <string name="hint_input_from">Input From</string>
+    <string name="to">To</string>
+    <string name="hint_input_to">Input To</string>
+    <string name="balance_number">BalanceNumber</string>
+
+    //fragment_withdraw
+    <string name="welcome_bank_withdraw">Welcome to the bank Withdraw</string>
+    <string name="discount_after_acceptance">Discount after acceptance</string>
+    <string name="hint_input_Withdraw">Input Withdraw</string>
+    <string name="hint_money_source">Money Source</string>
+
+
+    //fragment_register
+    <string name="title_register">Register</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="radio_button">Employee</string>
+    <string name="radio_button2">Client</string>
+
+    //fragment_personal_information
+    <string name="hint_position">Positions</string>
     <string-array name="Positions">
         <item>Team Leader</item>
         <item>Senior</item>
         <item>Junior </item>
     </string-array>
+    <string name="hint_number_years_of_experience">Number Years of Experience</string>
+    <string name="btn_register">Register</string>
+
+    //fragment_login
+    <string name="title_login">Login</string>
+
+    //fragment_item_list_withdraw
+    <string name="text_name">Transaction ID</string>
+    <string name="text_currency">Client Name :</string>
+    <string name="text_number_withdraw">Number of Withdraw</string>
+    <string name="btn_accept">Accept</string>
+    <string name="btn_reject">Reject</string>
+
+    //fragment_item_list_history
+    <string name="text_number_deposit">Amount:</string>
+    <string name="text_request_date">Request Date</string>
+    <string name="text_approved_date">Approved Date</string>
+    <string name="text_source_of_cash">Source Of Cash :</string>
+
+    <string name="text_employee_name">Employee Name :</string>
+
+
+
+    //fragment_item_list_deposit_request
+    <string name="btn_waiting">Waiting</string>
+
+    //fragment_employee_home
+    <string name="title_welcome_bank">Welcome Bank</string>
+    <string name="btn_withdraw_access">Withdraw Access</string>
+    <string name="btn_deposit_access">Deposit Access</string>
+    <string name="btn_history_withdraw">History Withdraw</string>
+    <string name="btn_history_deposit">History Deposit</string>
+
+    //fragment_deposit_status
+    <string name="btn_apply">Apply</string>
+
+    //fragment_deposit
+    <string name="hint_input_deposit">Input Deposit</string>
+    <string name="welcome_bank_deposit">Welcome to the bank Deposit</string>
+
+    //fragment_client_home
+    <string name="btn_withdraw">Withdraw</string>
+    <string name="btn_deposit">Deposit</string>
+
+    //fragment_additional_information
+    <string name="title_additional_information">Additional Information</string>
+    <string name="hint_credit_type">Credit Type</string>
     <string-array name="creditType">
         <item>Pounds</item>
         <item>Dollar</item>
-
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_job">Job</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_login">Login</string>
+    <string name="personal_information">Personal Information</string>
+
+    //fragment_class_withdraw_and_deposit_status
+    <string name="title_accept">Accept</string>
+    <string name="title_pending">Pending</string>
+    <string name="title_reject">Reject</string>
+
+
+    //fragment_details_of_history
+    <string name="title_details">Details</string>
+
+
+
 </resources>

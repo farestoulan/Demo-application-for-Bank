@@ -8,16 +8,18 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Personal Information"
+        android:layout_marginBottom="24dp"
+        android:text="@string/personal_information"
         android:textColor="#082AE8"
         android:textSize="34sp"
         android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/view_Personal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/view_Personal"
@@ -52,7 +54,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Positions"
+                android:hint="@string/hint_position"
                 app:startIconDrawable="@drawable/icone"
                 >
 
@@ -81,7 +83,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="6dp"
-                    android:hint="Number Years of Experience"/>
+                    android:inputType="number"
+                    android:hint="@string/hint_number_years_of_experience"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -94,9 +97,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="116dp"
         android:background="@drawable/login_btn_bg"
-        android:text="Register"
+        android:text="@string/btn_register"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

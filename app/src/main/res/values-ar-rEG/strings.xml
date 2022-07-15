@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">بنك</string>
+    <string name="open" >أفتح</string>
+    <string name="close" >أغلق</string>
+    <string name="balance_amount" >مقدار الرصيد :</string>
+    <string name="from" >من</string>
+    <string name="hint_input_from" >أدخل من</string>
+    <string name="to" >الى</string>
+    <string name="hint_input_to" >أدخل الى</string>
+    <string name="welcome_bank_withdraw" >مرحبا بكم فى عملية السحب بالبنك</string>
+    <string name="discount_after_acceptance" >الخصم بعد القبول</string>
+    <string name="hint_input_Withdraw" >أدخل مبلغ السحب</string>
+    <string name="btn_submit" >إرسال</string>
+    <string name="title_register" >تسجيل</string>
+    <string name="btn_login" >تسجيل الدخول</string>
+    <string name="hint_name" >الاسم</string>
+    <string name="hint_email" >الايميل</string>
+    <string name="hint_password" >الباسورد</string>
+    <string name="radio_button" >الموظف</string>
+    <string name="radio_button2" >العميل</string>
+    <string name="personal_information">معلومات شخصيه</string>
+    <string name="hint_position">المناصب</string>
+    <string name="hint_number_years_of_experience">رقم سنوات الخبره</string>
+    <string name="btn_register">تسجيل</string>
+    <string name="title_login">تسجيل الدخول</string>
+    <string name="text_name">رقم العملية</string>
+    <string name="text_currency">اسم العميل :</string>
+    <string name="text_number_withdraw">مبلغ السحب</string>
+    <string name="btn_accept">قبول</string>
+    <string name="btn_reject">رفض</string>
+    <string name="text_number_deposit">مقدار الايداع :</string>
+    <string name="btn_waiting">انتظار</string>
+    <string name="title_welcome_bank">مرحبا بكم بالبنك</string>
+    <string name="hint_input_deposit">أدخل الايداع</string>
+    <string name="btn_withdraw">سحب</string>
+    <string name="btn_deposit">ايداع</string>
+    <string name="title_additional_information">معلومات إضافية</string>
+    <string name="hint_credit_type">نوع الائتمان</string>
+    <string name="hint_job">الوظيفة</string>
+    <string name="btn_apply">تقدم</string>
+    <string name="btn_withdraw_access">التحكم بالسحب</string>
+    <string name="btn_deposit_access">التحكم بالايداع</string>
+    <string name="btn_history_withdraw">عمليات السحب</string>
+    <string name="btn_history_deposit">عمليات الايداع</string>
+    <string name="balance_number">رقم الرصيد</string>
+    <string name="title_accept">المقبولين</string>
+    <string name="title_pending">فى الانتظار</string>
+    <string name="title_reject">المرفوضين</string>
+    <string name="text_request_date">تاريخ ارسال الطلب</string>
+    <string name="text_approved_date">تاريخ الموافقه على الطلب</string>
+    <string name="text_source_of_cash"> مصدر النقود :</string>
+    <string name="title_details">التفاصيل</string>
+    <string name="hint_money_source">مصدر المال</string>
+    <string name="text_employee_name">اسم الموظف :</string>
+    <string name="welcome_bank_deposit">مرحبا بكم فى عملية الايداع بالبنك</string>
+
+
+
+</resources>

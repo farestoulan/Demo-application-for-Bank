@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/deposit"
+    tools:context=".DetailsOfHistoryFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="369dp"
+            android:background="@drawable/btn_top"
+            android:backgroundTint="#63ABCD">
+
+            <TextView
+                android:id="@+id/tvDetailsTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView16"
+                android:layout_marginTop="17dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/text_name"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/DetailsSourceOfCode"
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailsTransaction"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="46dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text="@string/text_source_of_cash"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/clientNameDetails"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DetailsSourceOfCode"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text="@string/text_currency"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/amountDetalis"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmployeeNameDetailes"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="9dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text="@string/text_number_deposit"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailsTransaction"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="47dp"
+                android:layout_marginEnd="14dp"
+                android:layout_toStartOf="@+id/DetailsSourceOfCode"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_source_of_cash"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView13"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/clientNameDetails"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/text_currency"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView19"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="17dp"
+                android:layout_toStartOf="@+id/amountDetalis"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/balance_amount"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="17dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/text_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView14"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="14dp"
+                android:layout_toStartOf="@+id/tvEmployeeNameDetailes"
+                android:fontFamily="sans-serif-black"
+                android:gravity="start"
+                android:text="@string/text_employee_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeNameDetailes"
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DetailsSourceOfCode"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="95dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:text="@string/text_employee_name"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/title_details"
+        android:textColor="#0357AE"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

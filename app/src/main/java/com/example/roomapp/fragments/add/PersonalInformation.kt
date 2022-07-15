@@ -22,14 +22,10 @@ class PersonalInformation : Fragment() {
     var emailData: String = ""
     var passwordData: String = ""
     var isClient: Boolean = false
-
-
     private lateinit var pViewModel: ViewModel
-
 
     private var _binding: FragmentPersonalInformationBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,19 +39,15 @@ class PersonalInformation : Fragment() {
         emailData = PersonalInformationArgs.fromBundle(requireArguments()).email.toString()
         passwordData = PersonalInformationArgs.fromBundle(requireArguments()).password.toString()
 
-
         pViewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
-
         val position = resources.getStringArray(R.array.Positions)
-        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item_personal, position)
+        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, position)
         binding.listPosition.setAdapter(arrayAdapter)
 
         binding.btnRegisterPersonal.setOnClickListener {
             val guserId = insertDataToUserinDatabase()
             insertDataToEmployeeinDatabase(guserId)
-
-
         }
 
         return view
@@ -73,8 +65,6 @@ class PersonalInformation : Fragment() {
 
         val position = binding.listPosition.text.toString()
         val experience = binding.etExperience.text.toString()
-
-
 
         if (inputCheck(position, experience)) {
             // Create employee Object

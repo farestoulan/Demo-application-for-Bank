@@ -8,16 +8,18 @@
 
     <TextView
         android:id="@+id/tv_Additional"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Additional Information"
+        android:layout_marginBottom="12dp"
+        android:text="@string/title_additional_information"
         android:textColor="#082AE8"
+        android:gravity="center"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view_Additional"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/view_Additional"
@@ -52,7 +54,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Credit Type"
+                android:hint="@string/hint_credit_type"
                 >
 
                 <AutoCompleteTextView
@@ -80,7 +82,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="6dp"
-                    android:hint="Job"/>
+                    android:hint="@string/hint_job"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -93,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="116dp"
         android:background="@drawable/login_btn_bg"
-        android:text="Register"
+        android:text="@string/btn_register"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -103,7 +105,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
         app:layout_constraintVertical_bias="0.573" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

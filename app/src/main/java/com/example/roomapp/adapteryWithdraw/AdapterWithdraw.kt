@@ -1,4 +1,4 @@
-package com.example.roomapp.adaptery
+package com.example.roomapp.adapteryWithdraw
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomapp.R
-import com.example.roomapp.dao.WithdrawDAO
+import com.example.roomapp.daoWithdraw.WithdrawDAO
 
 class AdapterWithdraw(private val wContext: Context, wData: MutableList<WithdrawDAO.BalanceAmountCreditTypesWithdraw?>?) :
     RecyclerView.Adapter<AdapterWithdraw.MyViewHolder>() {
@@ -30,16 +30,16 @@ class AdapterWithdraw(private val wContext: Context, wData: MutableList<Withdraw
         v = inflater.inflate(R.layout.fragment_item_list_withdraw, parent, false)
         return MyViewHolder(v)
     }
-    override fun onBindViewHolder(holder: AdapterWithdraw.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val obj = wData?.get(position)
         obj?.let { item ->
             holder.withdraw_txt.text = item.value_Withdraw.toString()
             holder.currency_txt.text = item.creditType
             holder.name_txt.text = item.userName
             holder.acciept.setOnClickListener { wClickListener.onItemClick(position) }
-            holder.reject.setOnClickListener { wClickListener.itemClick(item.withdraw_Id) }    }
+            holder.reject.setOnClickListener { wClickListener.itemClick(position) }
 
-
+        }
     }
     fun removeAt(position: Int) {
         wData?.removeAt(position)

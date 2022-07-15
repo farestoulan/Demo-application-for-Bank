@@ -13,12 +13,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
-import com.example.roomapp.data.UserDatabase
+import com.example.roomapp.database.UserDatabase
 import com.example.roomapp.databinding.FragmentLogInBinding
 
 
 class LogInFragment : Fragment() {
-    lateinit var preferences: SharedPreferences
+        lateinit var preferences: SharedPreferences
 
 
     private var _binding: FragmentLogInBinding? = null
