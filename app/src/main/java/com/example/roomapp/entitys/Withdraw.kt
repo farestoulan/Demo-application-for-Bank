@@ -16,6 +16,7 @@ class Withdraw(
     val request_Date: String,
     val approved_Date :String,
     val employee_Name:String,
-    val client_ID:Int
+    val client_ID:Int,
+    val employee_ID:Int
     )
 

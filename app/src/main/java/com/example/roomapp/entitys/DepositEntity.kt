@@ -15,5 +15,6 @@ data class DepositEntity(
     val request_Date: String,
     val approved_Date :String,
     val employee_name:String,
-    val client_ID:Int
+    val client_ID:Int,
+    val employee_ID:Int
 )

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="HomeClient"
+        android:id="@+id/clientHome"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item android:title="HomeEmployee"
+        android:id="@+id/employeeHome"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+
+    <item android:title="StatusDeposit"
+        android:id="@+id/depositStatus"
+        android:icon="@drawable/ic_baseline_account_balance_24"
+        />
+    <item android:title="StatusWithdraw"
+        android:id="@+id/withdrawStatus"
+        android:icon="@drawable/ic_baseline_account_balance_24"
+        />
+
+
+
+
+
+
+</menu>

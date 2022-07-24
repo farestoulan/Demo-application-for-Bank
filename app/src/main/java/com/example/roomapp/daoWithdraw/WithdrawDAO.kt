@@ -88,4 +88,10 @@ interface WithdrawDAO {
     @Query("UPDATE table_Withdraw SET approved_Date=:approved_Date  WHERE id = :id")
     fun updateApprovedDateWithdraw(approved_Date: String, id: Int)
 
+    @Query("UPDATE table_Withdraw SET employee_name=:employeeName  WHERE id = :id")
+    fun employeeName(employeeName: String, id: Int)
+
+    @Query("UPDATE table_Withdraw SET employee_ID = :employee_ID  WHERE id = :id")
+    fun updateEmployeeID(employee_ID :Int ,     id: Int)
+
 }

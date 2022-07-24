@@ -1,4 +1,4 @@
-package com.example.roomapp
+package com.example.roomapp.history
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,9 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.roomapp.databinding.FragmentDepositStatusBinding
 import com.example.roomapp.databinding.FragmentDetalisOfHistoryBinding
-import com.example.roomapp.fragments.add.AdditionalInformationsArgs
 import com.example.roomapp.viewModel.ViewModel
 import kotlinx.android.synthetic.main.fragment_detalis_of_history.view.*
 
@@ -34,13 +32,14 @@ class DetailsOfHistoryFragment : Fragment() {
         preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE)
         val getID = preferences.getInt("data", id)
         client_ID = aViewModel.returnClientID(getID)
-    var  sourceOfCash =   aViewModel.returnMoneySource(client_ID)
+        var sourceOfCash = aViewModel.returnMoneySource(client_ID)
 
-        binding.DetailsSourceOfCode.text =sourceOfCash
+        binding.DetailsSourceOfCode.text = sourceOfCash
 
 
-        val clientName=   DetailsOfHistoryFragmentArgs.fromBundle(requireArguments()).clientName
-        val transactionID = DetailsOfHistoryFragmentArgs.fromBundle(requireArguments()).transactionID
+        val clientName = DetailsOfHistoryFragmentArgs.fromBundle(requireArguments()).clientName
+        val transactionID =
+            DetailsOfHistoryFragmentArgs.fromBundle(requireArguments()).transactionID
         val amount = DetailsOfHistoryFragmentArgs.fromBundle(requireArguments()).amountBalance
         val employeeName = DetailsOfHistoryFragmentArgs.fromBundle(requireArguments()).employeeName
         binding.clientNameDetails.text = clientName

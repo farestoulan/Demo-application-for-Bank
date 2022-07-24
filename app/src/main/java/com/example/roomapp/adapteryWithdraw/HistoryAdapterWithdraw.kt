@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomapp.R
-import com.example.roomapp.adapteryDeposit.HistoryAdapter
-import com.example.roomapp.daoDeposit.DepositDao
 import com.example.roomapp.daoWithdraw.WithdrawDAO
 
 class HistoryAdapterWithdraw(private val mContext: Context, mData: List<WithdrawDAO.BalanceAmountCreditTypesHistoryWithdraw?>?
@@ -42,6 +40,8 @@ class HistoryAdapterWithdraw(private val mContext: Context, mData: List<Withdraw
             holder.tvTeansactionIDHistory.text = item.transactionID
             holder.tvRequestDAte.text = item.requestDate
             holder.tvApprovedDate.text=item.approvedDate
+            holder.tvEmployeeNamee.text=item.employeeName
+
 
 
         }
@@ -59,6 +59,8 @@ class HistoryAdapterWithdraw(private val mContext: Context, mData: List<Withdraw
         var tvAmountHistory: TextView
         var tvRequestDAte:TextView
         var tvApprovedDate:TextView
+        var tvEmployeeNamee:TextView
+
 
 
 
@@ -68,6 +70,7 @@ class HistoryAdapterWithdraw(private val mContext: Context, mData: List<Withdraw
             tvAmountHistory = itemView.findViewById(R.id.tv_AmountHistory)
             tvRequestDAte = itemView.findViewById(R.id.tvRequestDate)
             tvApprovedDate = itemView.findViewById(R.id.tvApprovedDate)
+            tvEmployeeNamee = itemView.findViewById(R.id.tvEmployeeNamee)
             itemView.setOnClickListener(this)
 
         }

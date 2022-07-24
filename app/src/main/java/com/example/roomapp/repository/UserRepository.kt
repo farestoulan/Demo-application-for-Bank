@@ -63,6 +63,18 @@ class UserRepository(
         depositDao.updateEmployeeName(employeeName ,id)
     }
 
+    fun updateEmployeeID(employeeID: Int, id: Int){
+        depositDao.updateEmployeeID(employeeID ,id)
+    }
+
+    fun employeeName(employeeName: String, id: Int){
+        withdrawDao.employeeName(employeeName ,id)
+    }
+
+    fun updateEmployeeIDWithdraw(employeeID: Int, id: Int){
+        withdrawDao.updateEmployeeID(employeeID ,id)
+    }
+
     fun updateApprovedDateWithdraw(approved_Date: String, id: Int){
         withdrawDao.updateApprovedDateWithdraw(approved_Date ,id)
     }
@@ -74,6 +86,8 @@ class UserRepository(
     fun returnEmployeeID(employee_ID :Int):Int{
         return employeeDao.returnEmployeeID(employee_ID)
     }
+
+
 
     fun returnEmployeeName(  id: Int):String{
         return userDao.returnEmployeeName(id)

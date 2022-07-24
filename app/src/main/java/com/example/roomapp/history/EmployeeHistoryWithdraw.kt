@@ -1,14 +1,14 @@
 package com.example.roomapp.history
 
-import android.os.Bundle
+import  android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.roomapp.adapteryDeposit.HistoryAdapter
+import androidx.navigation.fragment.findNavController
 import com.example.roomapp.adapteryWithdraw.HistoryAdapterWithdraw
+import com.example.roomapp.daoWithdraw.WithdrawDAO
 import com.example.roomapp.database.UserDatabase
-import com.example.roomapp.databinding.FragmentEmployeeHistoryDepositBinding
 import com.example.roomapp.databinding.FragmentEmployeeHistoryWithdrawBinding
 
 
@@ -32,6 +32,28 @@ class EmployeeHistoryWithdraw : Fragment() {
 
         adapter = HistoryAdapterWithdraw(requireContext(), listHistory)
         binding.recyclerHistoryWithdraw.adapter = adapter
+
+        adapter.setClickListener(object :HistoryAdapterWithdraw.ItemClickListenerWithdraw{
+            override fun onItemClick(
+                view: View,
+                position: Int,
+                mData: List<WithdrawDAO.BalanceAmountCreditTypesHistoryWithdraw?>?
+            ) {
+                val action =
+                    EmployeeHistoryWithdrawDirections.actionEmployeeHistoryWithdrawToDetailsOfHistoryFragment(
+                        mData?.get(
+                            position
+                        )?.transactionID,
+                        mData?.get(position)?.userName,
+                        mData?.get(position)?.value_Withdraw!!.toInt(),
+                        mData?.get(position)?.employeeName
+                    )
+                findNavController().navigate(action)
+            }
+
+        })
+
+
 
         return view
     }

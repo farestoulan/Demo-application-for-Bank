@@ -20,6 +20,7 @@ import java.time.format.DateTimeFormatter
 
 
 class WithdrawAccess : Fragment() {
+    var getID: Int = 0
     var employeeID: Int = 0
     lateinit var preferences: SharedPreferences
     private lateinit var adapter: AdapterWithdraw
@@ -38,7 +39,7 @@ class WithdrawAccess : Fragment() {
 
         preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE)
 
-        val getID = preferences.getInt("data", id)
+        getID = preferences.getInt("data", id)
         employeeID = wViewModel.returnEmployeeID(getID)
 
         var listWithdraw = UserDatabase.getDatabase(requireContext())
@@ -53,7 +54,6 @@ class WithdrawAccess : Fragment() {
         adapter.setClickListener(object : AdapterWithdraw.ItemClickListenerWithdraw {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onItemClick(id: Int) {
-                val name=  wViewModel.returnEmployeeName(employeeID)
 
                 val currentDate = LocalDateTime.now()
                 val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
@@ -64,7 +64,7 @@ class WithdrawAccess : Fragment() {
                 val valueWithdraw = mutableListWithdraw?.get(id)?.value_Withdraw
                 val pending = wViewModel.returnPendingBalance(clientID!!)
                 val resultPending = pending - valueWithdraw!!
-                wViewModel.updatePendingBalance(resultPending,clientID)
+                wViewModel.updatePendingBalance(resultPending, clientID)
 
                 val balanceAmount = wViewModel.returnBalanceAmount(clientID!!)
                 val valueAmountBalance = balanceAmount?.minus(valueWithdraw!!)
@@ -75,7 +75,10 @@ class WithdrawAccess : Fragment() {
                 if (withdrawID != null) {
                     wViewModel.updateApprovedDateWithdraw(formatted, withdrawID)
                 }
-                wViewModel.updateEmployeeName(name,withdrawID!!)
+                val name = wViewModel.returnEmployeeName(getID)
+                wViewModel.UpdateEmployeeName(name, withdrawID!!)
+                wViewModel.updateEmployeeIDWithdraw(employeeID, withdrawID)
+
 
 
                 if (valueWithdraw != null) {
@@ -92,9 +95,11 @@ class WithdrawAccess : Fragment() {
 
                 val pending = wViewModel.returnPendingBalance(clientID!!)
                 val resultPending = pending - valueWithdraw!!
-                wViewModel.updatePendingBalance(resultPending,clientID)
-                val name=  wViewModel.returnEmployeeName(employeeID)
-                wViewModel.updateEmployeeName(name,withdrawID!!)
+                wViewModel.updatePendingBalance(resultPending, clientID)
+                val name = wViewModel.returnEmployeeName(getID)
+                wViewModel.UpdateEmployeeName(name, withdrawID!!)
+                wViewModel.updateEmployeeIDWithdraw(employeeID, withdrawID)
+
 
                 withdrawID?.let { wViewModel.returnUpdateWithdraw("Reject", it) }
                 adapter.removeAt(id)

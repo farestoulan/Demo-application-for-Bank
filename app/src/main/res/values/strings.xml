@@ -55,7 +55,6 @@
     <string name="text_employee_name">Employee Name :</string>
 
 
-
     //fragment_item_list_deposit_request
     <string name="btn_waiting">Waiting</string>
 
@@ -97,7 +96,8 @@
 
     //fragment_details_of_history
     <string name="title_details">Details</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="your_history">Your own history</string>
 
 
 </resources>

@@ -64,11 +64,10 @@ class Withdraw : Fragment() {
             submit()
 
         } else {
-            Toast.makeText(
-                requireContext(),
-                "Invalid.Pleas input Withdraw",
-                Toast.LENGTH_LONG
-            ).show()
+            MaterialAlertDialogBuilder(requireContext()).setTitle("error")
+                .setMessage("Invalid.Pleas input Withdraw").setPositiveButton("OK") {_,_ ->
+            }.show()
+
 
         }
 
@@ -97,7 +96,7 @@ class Withdraw : Fragment() {
                     // Create Withdraw Object
                     val withdraw = Withdraw(
                         0, transactionID, inputWithdraw.toString(), "Pending", moneySource,
-                        formatted, "","", client_ID
+                        formatted, "", "", client_ID, 0
                     )
                     // Add Data to Database
                     wViewModel.addWithdraw(withdraw)
@@ -120,11 +119,11 @@ class Withdraw : Fragment() {
             wViewModel.updatePendingBalance(resultPending, client_ID)
 
         } else {
-            Toast.makeText(
-                requireContext(),
-                "pleas number is bigger than amount Balance",
-                Toast.LENGTH_LONG
-            ).show()
+            MaterialAlertDialogBuilder(requireContext()).setTitle("error")
+                .setMessage("pleas number is bigger than amount Balance")
+                .setPositiveButton("OK") { _, _ ->
+                }.show()
+
         }
 
 

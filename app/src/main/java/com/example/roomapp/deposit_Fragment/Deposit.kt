@@ -17,6 +17,7 @@ import com.example.roomapp.entitys.DepositEntity
 import com.example.roomapp.R
 import com.example.roomapp.viewModel.ViewModel
 import com.example.roomapp.databinding.FragmentDepositBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -41,8 +42,9 @@ class Deposit : Fragment() {
 
         dViewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
-        var getID = preferences.getInt("data", id)
+        val getID = preferences.getInt("data", id)
         client_ID = dViewModel.returnClientID(getID)
+
 
 
         dViewModel.returnDate(client_ID)
@@ -70,8 +72,8 @@ class Deposit : Fragment() {
         if (inputCheck(inputDeposit)) {
             // Create deposit Object
             val deposit = DepositEntity(
-                0, transactionID, inputDeposit, "Pending",moneySource,
-                 formatted,"","",client_ID
+                0, transactionID, inputDeposit, "Pending", moneySource,
+                formatted, "", "", client_ID, 0
             )
             // Add Data to Database
             dViewModel.addDeposit(deposit)
@@ -80,17 +82,20 @@ class Deposit : Fragment() {
 
 
         } else {
-            Toast.makeText(requireContext(), "Invalid.Pleas input Deposit", Toast.LENGTH_LONG)
-                .show()
+
+            MaterialAlertDialogBuilder(requireContext()).setTitle("error").setMessage("Invalid.Pleas input Deposit")
+                .setPositiveButton("OK") { _, _ ->
+                }.show()
         }
+
     }
-
-    private fun inputCheck(
-        inputDeposit: String,
-
-        ): Boolean {
-        return !(TextUtils.isEmpty(inputDeposit))
-    }
-
-
 }
+
+private fun inputCheck(
+    inputDeposit: String,
+
+    ): Boolean {
+    return !(TextUtils.isEmpty(inputDeposit))
+}
+
+

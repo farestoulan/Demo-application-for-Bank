@@ -10,11 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
 import com.example.roomapp.database.UserDatabase
 import com.example.roomapp.databinding.FragmentLogInBinding
+import java.io.Closeable
 
 
 class LogInFragment : Fragment() {
@@ -30,6 +33,8 @@ class LogInFragment : Fragment() {
     ): View? {
         _binding = FragmentLogInBinding.inflate(inflater, container, false)
         val view = binding.root
+
+
 
         preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE)
 

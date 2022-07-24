@@ -48,8 +48,6 @@ class PendingDepositFragment : Fragment() {
         binding.recyclerPending.adapter = adapter
 
         adapter.setClickListener(object : HistoryAdapter.ItemClickListener {
-
-
             override fun onItemClick(
                 view: View,
                 position: Int,
@@ -66,7 +64,7 @@ class PendingDepositFragment : Fragment() {
                         mData?.get(position)?.value_Deposit!!.toInt(),
                         mData?.get(position)?.employeeName
 
-                        )
+                    )
                 findNavController().navigate(action)
             }
         })

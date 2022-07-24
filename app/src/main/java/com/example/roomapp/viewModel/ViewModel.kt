@@ -73,6 +73,17 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         repository.updateEmployeeName(employeeName ,id)
     }
 
+    fun updateEmployeeID(employeeID: Int, id: Int){
+        repository.updateEmployeeID(employeeID ,id)
+    }
+
+    fun updateEmployeeIDWithdraw(employeeID: Int, id: Int){
+        repository.updateEmployeeID(employeeID ,id)
+    }
+
+    fun UpdateEmployeeName(employeeName: String, id: Int){
+        repository.employeeName(employeeName ,id)
+    }
     fun updateApprovedDateWithdraw(approved_Date: String, id: Int){
         repository.updateApprovedDateWithdraw(approved_Date ,id)
     }
@@ -84,6 +95,8 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     fun returnEmployeeID(employee_ID :Int):Int{
         return repository.returnEmployeeID(employee_ID)
     }
+
+
 
     fun returnUpdate(a: String, b: Int) {
         return repository.returnUpdate(a, b)

@@ -14,10 +14,15 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_logInFragment_to_employeeHome"
-            app:destination="@id/employeeHome" />
+            app:destination="@id/employeeHome"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true"
+            />
         <action
             android:id="@+id/action_logInFragment_to_clientHome"
-            app:destination="@id/clientHome" />
+            app:destination="@id/clientHome"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true"/>
 
 
     </fragment>
@@ -91,22 +96,31 @@
         android:name="com.example.roomapp.home.EmployeeHome"
         android:label="fragment_employee_home"
         tools:layout="@layout/fragment_employee_home" >
-        <action
-            android:id="@+id/action_employeeHome_to_depositAccess"
-            app:destination="@id/depositAccess" />
+
         <argument
             android:name="id"
             app:argType="integer"
             />
+
+
+
+        <action
+            android:id="@+id/action_employeeHome_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_employeeHome_to_depositAccess"
+            app:destination="@id/depositAccess" />
         <action
             android:id="@+id/action_employeeHome_to_withdrawAccess"
             app:destination="@id/withdrawAccess" />
         <action
-            android:id="@+id/action_employeeHome_to_employeeHistory"
-            app:destination="@id/employeeHistory" />
-        <action
             android:id="@+id/action_employeeHome_to_employeeHistoryWithdraw"
             app:destination="@id/employeeHistoryWithdraw" />
+        <action
+            android:id="@+id/action_employeeHome_to_employeeHistory"
+            app:destination="@id/employeeHistory" />
 
     </fragment>
     <fragment
@@ -119,9 +133,12 @@
         <action
             android:id="@+id/action_clientHome_to_depositStatus"
             app:destination="@id/depositStatus" />
+
         <action
-            android:id="@+id/action_clientHome_to_withdrawStatus"
-            app:destination="@id/withdrawStatus" />
+            android:id="@+id/action_clientHome_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/clientHome"
+            app:popUpToInclusive="true" />
 
 
     </fragment>
@@ -152,17 +169,29 @@
         android:label="fragment_deposit_access"
         tools:layout="@layout/fragment_deposit_access" >
 
+        <action
+            android:id="@+id/action_depositAccess_to_employeeHome"
+            app:destination="@id/employeeHome" />
     </fragment>
     <fragment
         android:id="@+id/withdrawAccess"
         android:name="com.example.roomapp.withDraw_Fragment.WithdrawAccess"
         android:label="fragment_withdraw_access"
-        tools:layout="@layout/fragment_withdraw_access" />
+        tools:layout="@layout/fragment_withdraw_access" >
+        <action
+            android:id="@+id/action_withdrawAccess_to_employeeHome"
+            app:destination="@id/employeeHome" />
+    </fragment>
     <fragment
         android:id="@+id/employeeHistory"
         android:name="com.example.roomapp.history.EmployeeHistoryDeposit"
         android:label="fragment_employee_history"
-        tools:layout="@layout/fragment_employee_history_deposit" />
+        tools:layout="@layout/fragment_employee_history_deposit" >
+        <action
+            android:id="@+id/action_employeeHistory_to_detailsOfHistoryFragment"
+            app:destination="@id/detailsOfHistoryFragment" />
+
+    </fragment>
     <fragment
         android:id="@+id/depositStatus"
         android:tag="depositStatus54"
@@ -176,6 +205,17 @@
         <action
             android:id="@+id/action_depositStatus_to_detailsOfHistoryFragment"
             app:destination="@id/detailsOfHistoryFragment" />
+        <action
+            android:id="@+id/action_depositStatus_to_clientHome"
+            app:destination="@id/clientHome"
+            app:popUpTo="@id/clientHome"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_depositStatus_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
     <fragment
@@ -192,15 +232,33 @@
         <action
             android:id="@+id/action_withdrawStatus_to_detailsOfHistoryFragment"
             app:destination="@id/detailsOfHistoryFragment" />
+        <action
+            android:id="@+id/action_withdrawStatus_to_clientHome"
+            app:destination="@id/clientHome"
+            app:popUpTo="@id/clientHome"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_withdrawStatus_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/employeeHistoryWithdraw"
         android:name="com.example.roomapp.history.EmployeeHistoryWithdraw"
         android:label="fragment_employee_history_withdraw"
-        tools:layout="@layout/fragment_employee_history_withdraw" />
+        tools:layout="@layout/fragment_employee_history_withdraw" >
+        <action
+            android:id="@+id/action_employeeHistoryWithdraw_to_detailsOfHistoryFragment"
+            app:destination="@id/detailsOfHistoryFragment" />
+        <action
+            android:id="@+id/action_employeeHistoryWithdraw_to_employeeHome"
+            app:destination="@id/employeeHome" />
+    </fragment>
     <fragment
         android:id="@+id/detailsOfHistoryFragment"
-        android:name="com.example.roomapp.DetailsOfHistoryFragment"
+        android:name="com.example.roomapp.history.DetailsOfHistoryFragment"
         android:label="fragment_detalis_of_history"
         tools:layout="@layout/fragment_detalis_of_history" >
         <argument
@@ -224,4 +282,9 @@
             />
 
     </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.example.roomapp.History"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

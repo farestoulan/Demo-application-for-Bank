@@ -16,7 +16,6 @@ interface DepositDao {
     fun returnStatus(id: Int): String
 
 
-
     //Update status request
     @Query("UPDATE add_Deposit SET status_Request=:statusRequest  WHERE id = :id")
     fun update(statusRequest: String, id: Int)
@@ -39,29 +38,28 @@ interface DepositDao {
 
     //History
 
+
+
     @Query(
-        "SELECT add_Deposit.employee_name As employeeName, add_Deposit.approved_Date As approvedDate, add_Deposit.transactionID As transactionID, add_Deposit.request_Date As requestDate,  add_Deposit.id AS deposit_Id ,add_Deposit.client_ID AS clientID  , add_Deposit.value_Deposit AS value_Deposit , table_Client.creditType AS creditType , user_table.name AS userName  " +
-                "FROM add_Deposit, table_Client, user_table  WHERE add_Deposit.client_ID = table_Client.id and(status_Request = 'Accept' OR  status_Request = 'Reject') "
+        "SELECT add_Deposit.employee_name As employeeName, add_Deposit.approved_Date As approvedDate, add_Deposit.transactionID As transactionID, add_Deposit.request_Date As requestDate, add_Deposit.id AS deposit_Id ,add_Deposit.client_ID AS clientID , add_Deposit.value_Deposit AS value_Deposit , table_Client.creditType AS creditType , user_table.name AS userName " +
+                "FROM add_Deposit, table_Client, user_table WHERE add_Deposit.client_ID = table_Client.id and table_Client.user_ID = user_table.id and  (status_Request = 'Accept' OR status_Request = 'Reject') and employee_ID=:id"
     )
-    fun loadMixedDataHistory(): List<BalanceAmountCreditTypesHistory?>?
+    fun loadMixedDataHistory(id: Int): List<BalanceAmountCreditTypesHistory?>?
 
     data class BalanceAmountCreditTypesHistory(
 
         val deposit_Id: Int,
-        val transactionID:String?,
+        val transactionID: String?,
         val clientID: Int,
         val value_Deposit: Int,
         val creditType: String?,
         val userName: String?,
-        val requestDate :String?,
-        val approvedDate :String?,
+        val requestDate: String?,
+        val approvedDate: String?,
         val employeeName: String?
 
 
-
-
     )
-
 
 
 //Query for list accept
@@ -100,8 +98,12 @@ interface DepositDao {
     @Query("UPDATE add_Deposit SET employee_name=:employeeName  WHERE id = :id")
     fun updateEmployeeName(employeeName: String, id: Int)
 
+    @Query("UPDATE add_Deposit SET employee_ID = :employee_ID  WHERE id = :id")
+    fun updateEmployeeID(employee_ID :Int ,     id: Int)
+
+
 
     @Query("SELECT   money_source from add_Deposit where id=:id ")
-    fun returnMoneySource(id: Int):String
+    fun returnMoneySource(id: Int): String
 
 }

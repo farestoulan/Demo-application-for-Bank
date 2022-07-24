@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
@@ -17,6 +18,7 @@ import com.example.roomapp.adapteryDeposit.AdapterViewpager
 import com.example.roomapp.database.UserDatabase
 import com.example.roomapp.databinding.FragmentDepositStatusBinding
 import com.example.roomapp.viewModel.ViewModel
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import java.util.*
@@ -27,8 +29,8 @@ class DepositStatus : Fragment() {
     lateinit var preferences: SharedPreferences
     private lateinit var dViewModel: ViewModel
 
-   private lateinit var tabLayout: TabLayout
-   private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
 
     private var _binding: FragmentDepositStatusBinding? = null
     private val binding get() = _binding!!
@@ -39,6 +41,10 @@ class DepositStatus : Fragment() {
     ): View? {
         _binding = FragmentDepositStatusBinding.inflate(inflater, container, false)
         val view = binding.root
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+
+            findNavController().navigate(R.id.action_depositStatus_to_clientHome)
+        }
 
         preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE)
         dViewModel = ViewModelProvider(requireActivity()).get(ViewModel::class.java)
@@ -46,7 +52,7 @@ class DepositStatus : Fragment() {
         val getID = preferences.getInt("data", id)
         client_ID = dViewModel.returnClientID(getID)
 
-       binding.tv2BalanceNumber.text =  dViewModel.returnBalanceAmount(client_ID).toString()
+        binding.tv2BalanceNumber.text = dViewModel.returnBalanceAmount(client_ID).toString()
 
 
         tabLayout = binding.tabLayout
@@ -55,22 +61,30 @@ class DepositStatus : Fragment() {
         tabLayout.isSelected
 
 
-binding.btnAplay.setOnClickListener {
-    val messageOne = binding.etFrom.text.toString()
-    val messageTwo = binding.etTo.text.toString()
-dViewModel.getValues(messageOne,messageTwo)
-}
+        binding.btnAplay.setOnClickListener {
+            val messageOne = binding.etFrom.text.toString()
+            val messageTwo = binding.etTo.text.toString()
+            dViewModel.getValues(messageOne, messageTwo)
+        }
 
 
 
 
-        TabLayoutMediator(tabLayout , viewPager){tab ,index ->
+        TabLayoutMediator(tabLayout, viewPager) { tab, index ->
 
-            tab.text = when(index){
-                0 -> {resources.getString(R.string.title_accept)}
-                1 -> {resources.getString(R.string.title_pending)}
-                2 -> {resources.getString(R.string.title_reject)}
-                else -> {throw  Resources.NotFoundException("Position Not Found")}
+            tab.text = when (index) {
+                0 -> {
+                    resources.getString(R.string.title_accept)
+                }
+                1 -> {
+                    resources.getString(R.string.title_pending)
+                }
+                2 -> {
+                    resources.getString(R.string.title_reject)
+                }
+                else -> {
+                    throw  Resources.NotFoundException("Position Not Found")
+                }
             }
 
         }.attach()

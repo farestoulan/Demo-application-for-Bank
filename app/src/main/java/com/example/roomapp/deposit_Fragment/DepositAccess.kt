@@ -23,6 +23,7 @@ import java.util.*
 
 class DepositAccess : Fragment() {
     var employeeID: Int = 0
+    var getID :Int = 0
     lateinit var preferences: SharedPreferences
 
     private lateinit var adapter: Adapter
@@ -43,10 +44,10 @@ class DepositAccess : Fragment() {
         dViewModel = ViewModelProvider(this).get(ViewModel::class.java)
         preferences = requireContext().getSharedPreferences("pref", Context.MODE_PRIVATE)
 
-        val getID = preferences.getInt("data", id)
+         getID = preferences.getInt("data", id)
         employeeID = dViewModel.returnEmployeeID(getID)
 
-        var list = UserDatabase.getDatabase(requireContext())
+        val list = UserDatabase.getDatabase(requireContext())
             .depositDao().loadMixedData()
 
         var mutableList = mutableListOf<DepositDao.BalanceAmountCreditTypes?>()
@@ -81,8 +82,10 @@ class DepositAccess : Fragment() {
                 if (depositID != null) {
                     dViewModel.updateApprovedDate(formatted, depositID)
                 }
-                val name=  dViewModel.returnEmployeeName(employeeID)
+                val name=  dViewModel.returnEmployeeName(getID)
                 dViewModel.updateEmployeeName(name,depositID!!)
+                dViewModel.updateEmployeeID(employeeID,depositID)
+
 
                 if (valueDeposit != null) {
                     valueAmountBalance?.let { dViewModel.returnBalance(it, clientID!!) }
@@ -95,8 +98,9 @@ class DepositAccess : Fragment() {
             override fun itemClick(id: Int) {
                 val depositID = mutableList?.get(0)?.deposit_Id
                 dViewModel.returnUpdate("Reject", depositID!!)
-                val name=  dViewModel.returnEmployeeName(employeeID)
-                dViewModel.updateEmployeeName(name,depositID!!)
+                val name=  dViewModel.returnEmployeeName(getID)
+                dViewModel.updateEmployeeName(name,depositID)
+                dViewModel.updateEmployeeID(employeeID,depositID)
                 adapter.removeAt(id)
 
 
@@ -105,7 +109,7 @@ class DepositAccess : Fragment() {
             override fun itemWattingClick(id: Int) {
                 val depositID = mutableList?.get(0)?.deposit_Id
                 dViewModel.returnUpdate("Pending", depositID!!)
-                val name=  dViewModel.returnEmployeeName(employeeID)
+                val name=  dViewModel.returnEmployeeName(getID)
                 dViewModel.updateEmployeeName(name,depositID!!)
 
                 binding.root.btnWatting.visibility = View.INVISIBLE
