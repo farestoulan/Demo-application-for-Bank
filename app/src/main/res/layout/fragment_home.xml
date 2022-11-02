@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:fillViewport="true"
+       >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E4F0FF"
+            tools:context=".presentation.test_task_eng_khaled.HomeFragment"
+            tools:ignore="MissingClass,MissingConstraints">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView26"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Rp500.000"
+                android:textColor="#282828"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView27"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="SPE Points"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1.520"
+                android:textColor="#FF8700"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView27"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="197dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView28"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="74dp"
+                    android:layout_height="97dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Top-up"
+                        android:textColor="#282828"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/button5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="9dp"
+                        android:background="@drawable/topup"
+                        android:text="Button" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="74dp"
+                    android:layout_height="97dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/relativeLayout1">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Transfer"
+                        android:textColor="#282828"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/button12"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="13dp"
+                        android:background="@drawable/transfer"
+                        android:text="Button" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout3"
+                    android:layout_width="74dp"
+                    android:layout_height="97dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/relativeLayout2">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Request"
+                        android:textColor="#282828"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/button7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="13dp"
+                        android:background="@drawable/request"
+                        android:text="Button" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout4"
+                    android:layout_width="74dp"
+                    android:layout_height="97dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/relativeLayout3">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Riwayat"
+                        android:textColor="#282828"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/button8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="13dp"
+                        android:background="@drawable/riwayat"
+                        android:text="Button" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="match_parent"
+                android:layout_height="216dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout7">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="0dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout10"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="11dp">
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginBottom="7dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="Listrik"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button6"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="17dp"
+                                android:background="@drawable/menulistrik"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout5"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginBottom="11dp"
+                            android:layout_toEndOf="@+id/relativeLayout10">
+
+                            <TextView
+                                android:id="@+id/textView34"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="9dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="7dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="Pulsa"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button9"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="17dp"
+                                android:background="@drawable/menupulsa"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout6"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="11dp"
+                            android:layout_toEndOf="@+id/relativeLayout5">
+
+                            <TextView
+                                android:id="@+id/textView43"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="7dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="Angsuran"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="17dp"
+                                android:background="@drawable/group"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout83"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginBottom="13dp"
+                            android:layout_toEndOf="@+id/relativeLayout6">
+
+                            <TextView
+                                android:id="@+id/textView80"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="9dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="7dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="M-Tix"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/grope1"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/relativeLayout8"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginEnd="-4dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout11"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="11dp">
+
+                            <TextView
+                                android:id="@+id/textView37"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="7dp"
+                                android:layout_marginEnd="7dp"
+                                android:layout_marginBottom="2dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="TV Digital and Internet"
+                                android:textColor="#282828"
+                                android:textSize="8sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button15"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="17dp"
+                                android:background="@drawable/menutvdigital"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout13"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="11dp"
+                            android:layout_toEndOf="@+id/relativeLayout11">
+
+                            <TextView
+                                android:id="@+id/textView39"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="9dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="2dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="Games"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button14"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="17dp"
+                                android:background="@drawable/group1008"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout15"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="11dp"
+                            android:layout_toEndOf="@+id/relativeLayout13">
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="2dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="BPJS"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button17"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="17dp"
+                                android:background="@drawable/group1004"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout39"
+                            android:layout_width="74dp"
+                            android:layout_height="97dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="17dp"
+                            android:layout_marginBottom="14dp"
+                            android:layout_toEndOf="@+id/relativeLayout15">
+
+                            <TextView
+                                android:id="@+id/textView81"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="9dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="-2dp"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="Semua"
+                                android:textColor="#282828"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/button19"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/menusemua"
+                                android:text="Button" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/my_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="31dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/bottomRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView41"
+                    android:layout_width="175dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="58dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="220dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Informasi Menarik"
+                    android:textColor="#282828"
+                    android:textSize="20dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_client_home">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
