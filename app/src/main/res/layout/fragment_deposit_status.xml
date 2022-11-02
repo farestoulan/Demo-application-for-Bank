@@ -5,7 +5,7 @@
     android:id="@+id/depositStatusUI"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".deposit_Fragment.DepositStatus">
+    tools:context=".presentation.screens.deposit_Fragment.DepositStatus">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -168,7 +168,7 @@
         android:gravity="center"
         android:text="@string/balance_amount"
         android:textColor="#0357AE"
-        android:textSize="35sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toStartOf="@+id/tv2BalanceNumber"
         app:layout_constraintStart_toStartOf="parent"
@@ -182,7 +182,7 @@
         android:gravity="center"
         android:text="@string/balance_number"
         android:textColor="#0357AE"
-        android:textSize="35sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvBalance"

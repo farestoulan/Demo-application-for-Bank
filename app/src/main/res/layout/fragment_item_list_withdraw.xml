@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".withDraw_Fragment.ItemListWithdraw">
+    tools:context=".presentation.screens.withDraw_Fragment.ItemListWithdraw">
 
     <TextView
         android:id="@+id/tv_Name_Withdraw"

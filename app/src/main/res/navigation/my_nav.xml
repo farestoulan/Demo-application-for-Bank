@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/logInFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.roomapp.login.LogInFragment"
+        android:name="com.example.roomapp.presentation.screens.login.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" >
         <action
@@ -14,7 +14,7 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_logInFragment_to_employeeHome"
-            app:destination="@id/employeeHome"
+            app:destination="@id/transactionEmployee"
             app:popUpTo="@id/logInFragment"
             app:popUpToInclusive="true"
             />
@@ -23,12 +23,24 @@
             app:destination="@id/clientHome"
             app:popUpTo="@id/logInFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_logInFragment_to_managerHomeFragment2"
+            app:destination="@id/managerHomeFragment2" />
+        <action
+            android:id="@+id/action_logInFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_fragmentEmployeeHome"
+            app:destination="@id/fragmentEmployeeHome"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true"
+            />
 
 
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.roomapp.register.RegisterFragment"
+        android:name="com.example.roomapp.presentation.screens.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -40,11 +52,19 @@
         <action
             android:id="@+id/action_registerFragment_to_additionalInformations"
             app:destination="@id/additionalInformations" />
+        <action
+            android:id="@+id/action_registerFragment_to_managerDirectorFragment2"
+            app:destination="@id/managerDirectorFragment2" />
+        <action
+            android:id="@+id/action_registerFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+
+
 
     </fragment>
     <fragment
         android:id="@+id/personalInformation"
-        android:name="com.example.roomapp.fragments.add.PersonalInformation"
+        android:name="com.example.roomapp.presentation.screens.add.PersonalInformation"
         android:label="fragment_personal_information"
         tools:layout="@layout/fragment_personal_information" >
         <action
@@ -69,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/additionalInformations"
-        android:name="com.example.roomapp.fragments.add.AdditionalInformations"
+        android:name="com.example.roomapp.presentation.screens.add.AdditionalInformations"
         android:label="fragment_additional_informations"
         tools:layout="@layout/fragment_additional_informations" >
         <action
@@ -92,10 +112,10 @@
             />
     </fragment>
     <fragment
-        android:id="@+id/employeeHome"
-        android:name="com.example.roomapp.home.EmployeeHome"
+        android:id="@+id/transactionEmployee"
+        android:name="com.example.roomapp.presentation.screens.home.EmployeeTransaction"
         android:label="fragment_employee_home"
-        tools:layout="@layout/fragment_employee_home" >
+        tools:layout="@layout/fragment_transations_employee" >
 
         <argument
             android:name="id"
@@ -103,12 +123,6 @@
             />
 
 
-
-        <action
-            android:id="@+id/action_employeeHome_to_logInFragment"
-            app:destination="@id/logInFragment"
-            app:popUpTo="@id/logInFragment"
-            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_employeeHome_to_depositAccess"
             app:destination="@id/depositAccess" />
@@ -121,11 +135,16 @@
         <action
             android:id="@+id/action_employeeHome_to_employeeHistory"
             app:destination="@id/employeeHistory" />
+        <action
+            android:id="@+id/action_transactionEmployee_to_fragmentEmployeeHome"
+            app:destination="@id/fragmentEmployeeHome"
+            app:popUpTo="@id/transactionEmployee"
+            app:popUpToInclusive="true" />
 
     </fragment>
     <fragment
         android:id="@+id/clientHome"
-        android:name="com.example.roomapp.home.ClientHome"
+        android:name="com.example.roomapp.presentation.screens.home.ClientHome"
         android:label="fragment_client_home"
         tools:layout="@layout/fragment_client_home" >
 
@@ -144,7 +163,7 @@
     </fragment>
     <fragment
         android:id="@+id/withdraw"
-        android:name="com.example.roomapp.withDraw_Fragment.Withdraw"
+        android:name="com.example.roomapp.presentation.screens.withDraw_Fragment.Withdraw"
         android:label="fragment_withdraw"
         tools:layout="@layout/fragment_withdraw" >
 
@@ -155,7 +174,7 @@
     </fragment>
     <fragment
         android:id="@+id/deposit"
-        android:name="com.example.roomapp.deposit_Fragment.Deposit"
+        android:name="com.example.roomapp.presentation.screens.deposit_Fragment.Deposit"
         android:label="fragment_deposit"
         tools:layout="@layout/fragment_deposit" >
 
@@ -165,26 +184,26 @@
     </fragment>
     <fragment
         android:id="@+id/depositAccess"
-        android:name="com.example.roomapp.deposit_Fragment.DepositAccess"
+        android:name="com.example.roomapp.presentation.screens.deposit_Fragment.DepositAccess"
         android:label="fragment_deposit_access"
         tools:layout="@layout/fragment_deposit_access" >
 
         <action
             android:id="@+id/action_depositAccess_to_employeeHome"
-            app:destination="@id/employeeHome" />
+            app:destination="@id/transactionEmployee" />
     </fragment>
     <fragment
         android:id="@+id/withdrawAccess"
-        android:name="com.example.roomapp.withDraw_Fragment.WithdrawAccess"
+        android:name="com.example.roomapp.presentation.screens.withDraw_Fragment.WithdrawAccess"
         android:label="fragment_withdraw_access"
         tools:layout="@layout/fragment_withdraw_access" >
         <action
             android:id="@+id/action_withdrawAccess_to_employeeHome"
-            app:destination="@id/employeeHome" />
+            app:destination="@id/transactionEmployee" />
     </fragment>
     <fragment
         android:id="@+id/employeeHistory"
-        android:name="com.example.roomapp.history.EmployeeHistoryDeposit"
+        android:name="com.example.roomapp.presentation.screens.history.EmployeeHistoryDeposit"
         android:label="fragment_employee_history"
         tools:layout="@layout/fragment_employee_history_deposit" >
         <action
@@ -196,7 +215,7 @@
         android:id="@+id/depositStatus"
         android:tag="depositStatus54"
 
-        android:name="com.example.roomapp.deposit_Fragment.DepositStatus"
+        android:name="com.example.roomapp.presentation.screens.deposit_Fragment.DepositStatus"
         android:label="fragment_deposit_status"
         tools:layout="@layout/fragment_deposit_status" >
         <action
@@ -220,7 +239,7 @@
     </fragment>
     <fragment
         android:id="@+id/withdrawStatus"
-        android:name="com.example.roomapp.withDraw_Fragment.WithdrawStatus"
+        android:name="com.example.roomapp.presentation.screens.withDraw_Fragment.WithdrawStatus"
         android:label="fragment_withdraw_status"
         tools:layout="@layout/fragment_withdraw_status" >
         <action
@@ -246,7 +265,7 @@
     </fragment>
     <fragment
         android:id="@+id/employeeHistoryWithdraw"
-        android:name="com.example.roomapp.history.EmployeeHistoryWithdraw"
+        android:name="com.example.roomapp.presentation.screens.history.EmployeeHistoryWithdraw"
         android:label="fragment_employee_history_withdraw"
         tools:layout="@layout/fragment_employee_history_withdraw" >
         <action
@@ -254,11 +273,11 @@
             app:destination="@id/detailsOfHistoryFragment" />
         <action
             android:id="@+id/action_employeeHistoryWithdraw_to_employeeHome"
-            app:destination="@id/employeeHome" />
+            app:destination="@id/transactionEmployee" />
     </fragment>
     <fragment
         android:id="@+id/detailsOfHistoryFragment"
-        android:name="com.example.roomapp.history.DetailsOfHistoryFragment"
+        android:name="com.example.roomapp.presentation.screens.history.DetailsOfHistoryFragment"
         android:label="fragment_detalis_of_history"
         tools:layout="@layout/fragment_detalis_of_history" >
         <argument
@@ -284,7 +303,121 @@
     </fragment>
     <fragment
         android:id="@+id/history"
-        android:name="com.example.roomapp.History"
+        android:name="com.example.roomapp.presentation.screens.history.History"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/branchesFragment2"
+        android:name="com.example.roomapp.presentation.screens.adminAdding.BranchesFragment"
+        android:label="fragment_branches"
+        tools:layout="@layout/fragment_branches" >
+
+        <action
+            android:id="@+id/action_branchesFragment2_to_departmentsFragment"
+            app:destination="@id/departmentsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/departmentsFragment"
+        android:name="com.example.roomapp.presentation.screens.adminAdding.DepartmentsFragment"
+        android:label="fragment_departments"
+        tools:layout="@layout/fragment_departments" >
+
+        <argument
+            android:name="branchID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_departmentsFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerDirectorFragment2"
+        android:name="com.example.roomapp.presentation.screens.add.ManagerDirectorFragment"
+        android:label="fragment_manager_director"
+        tools:layout="@layout/fragment_manager_director" >
+        <action
+            android:id="@+id/action_managerDirectorFragment2_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <argument
+            android:name="nameManager"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="emailManager"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="passwordManager"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerHomeFragment2"
+        android:name="com.example.roomapp.presentation.screens.home.ManagerHomeFragment"
+        android:label="fragment_manager_home"
+        tools:layout="@layout/fragment_manager_home" />
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.example.roomapp.presentation.screens.home.AdminHomeFragment"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_branchesFragment2"
+            app:destination="@id/branchesFragment2" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_departmentsFragment"
+            app:destination="@id/departmentsFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_rolesFragment"
+            app:destination="@id/rolesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.roomapp.presentation.screens.add.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" >
+
+        <action
+            android:id="@+id/action_adminFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <argument
+            android:name="nameAdmin"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="emailAdmin"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="passwordAdmin"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/rolesFragment"
+        android:name="com.example.roomapp.presentation.test_task_eng_khaled.RolesFragment"
+        android:label="fragment_roles"
+        tools:layout="@layout/fragment_roles" />
+    <fragment
+        android:id="@+id/loginUpdateFragment"
+        android:name="com.example.roomapp.presentation.test_task_eng_khaled.LoginUpdateFragment"
+        android:label="fragment_login_update"
+        tools:layout="@layout/fragment_login_update" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.roomapp.presentation.test_task_eng_khaled.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragmentEmployeeHome"
+        android:name="com.example.roomapp.FragmentEmployeeHome"
+        android:label="fragment_employee_home"
+        tools:layout="@layout/fragment_employee_home" >
+        <action
+            android:id="@+id/action_fragmentEmployeeHome_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/fragmentEmployeeHome"
+            app:popUpToInclusive="true" />
+    </fragment>
+
 </navigation>

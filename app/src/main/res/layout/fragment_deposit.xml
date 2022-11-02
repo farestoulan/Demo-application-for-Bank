@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/deposit"
-    tools:context=".deposit_Fragment.Deposit">
+    tools:context=".presentation.screens.deposit_Fragment.Deposit">
 
     <TextView
         android:id="@+id/textView"

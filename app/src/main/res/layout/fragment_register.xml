@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register.RegisterFragment">
+    tools:context=".presentation.screens.register.RegisterFragment">
 
     <TextView
         android:id="@+id/textView2"
@@ -74,9 +74,10 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="6dp"
                 android:paddingStart="6dp"
+                android:paddingEnd="6dp"
                 app:helperText=""
                 app:helperTextTextColor="@android:color/holo_red_dark"
-                android:paddingEnd="6dp">
+               >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_EmailRegister"
@@ -108,12 +109,33 @@
                     android:drawablePadding="6dp"
                     android:hint="@string/hint_password"
                     android:inputType="textPassword" />
+
+
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:paddingStart="6dp"
+                app:helperText=""
+                app:helperTextTextColor="@android:color/holo_red_dark"
+                android:paddingEnd="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <RadioGroup
                 android:id="@+id/RadioG_DataTaype"
                 android:layout_width="match_parent"
-                android:layout_height="64dp" >
+                android:layout_height="110dp">
 
                 <RadioButton
                     android:id="@+id/radioB_Employee"
@@ -131,6 +153,24 @@
                     android:fontFamily="sans-serif-black"
                     android:text="@string/radio_button2"
                     android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioB_Admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Admin "
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioB_Boss"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text=" Manager Director "
+                    android:textSize="16sp" />
+
+
             </RadioGroup>
 
 

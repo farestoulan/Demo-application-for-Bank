@@ -5,7 +5,7 @@
     android:id="@+id/withdrawStatusUI"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".withDraw_Fragment.WithdrawStatus">
+    tools:context=".presentation.screens.withDraw_Fragment.WithdrawStatus">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutWithdraw"
@@ -147,13 +147,13 @@
 
     <TextView
         android:id="@+id/tvBalanceWithdraw"
-        android:layout_width="282dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/balance_amount"
         android:textColor="#0357AE"
-        android:textSize="35sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutWithdraw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -167,7 +167,7 @@
         android:text="@string/balance_number"
 
         android:textColor="#0357AE"
-        android:textSize="35sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutWithdraw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvBalanceWithdraw"

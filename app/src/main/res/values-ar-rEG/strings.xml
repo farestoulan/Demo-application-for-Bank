@@ -3,7 +3,7 @@
     <string name="app_name">بنك</string>
     <string name="open" >أفتح</string>
     <string name="close" >أغلق</string>
-    <string name="balance_amount" >مقدار الرصيد :</string>
+    <string name="balance_amount" >مقدار الرصيد:</string>
     <string name="from" >من</string>
     <string name="hint_input_from" >أدخل من</string>
     <string name="to" >الى</string>
@@ -20,7 +20,7 @@
     <string name="radio_button" >الموظف</string>
     <string name="radio_button2" >العميل</string>
     <string name="personal_information">معلومات شخصيه</string>
-    <string name="hint_position">المناصب</string>
+    <string name="hint_departments">أقسام</string>
     <string name="hint_number_years_of_experience">رقم سنوات الخبره</string>
     <string name="btn_register">تسجيل</string>
     <string name="title_login">تسجيل الدخول</string>

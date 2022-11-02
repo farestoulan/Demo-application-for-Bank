@@ -4,7 +4,7 @@
     <string name="close">Close</string>
 
     //fragment_withdraw_status
-    <string name="balance_amount">Balance Amount :</string>
+    <string name="balance_amount">Balance Amount:</string>
     <string name="from">From</string>
     <string name="hint_input_from">Input From</string>
     <string name="to">To</string>
@@ -27,11 +27,10 @@
     <string name="radio_button2">Client</string>
 
     //fragment_personal_information
-    <string name="hint_position">Positions</string>
-    <string-array name="Positions">
-        <item>Team Leader</item>
-        <item>Senior</item>
-        <item>Junior </item>
+    <string name="hint_departments">Departments</string>
+    <string-array name="Departments">
+        <item>Operation</item>
+        <item>Financial </item>
     </string-array>
     <string name="hint_number_years_of_experience">Number Years of Experience</string>
     <string name="btn_register">Register</string>
@@ -98,6 +97,9 @@
     <string name="title_details">Details</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="your_history">Your own history</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
 
 
 </resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/boss"
+    tools:context=".presentation.screens.adminAdding.DepartmentsFragment">
+
+
+    <EditText
+        android:id="@+id/et_AddDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="168dp"
+        android:background="#63ABCD"
+        android:fontFamily="sans-serif-black"
+        android:hint="Add department"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_Rules"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="316dp"
+        android:background="#63ABCD"
+        android:fontFamily="sans-serif-black"
+        android:hint="Add Rules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_submitDepartment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_top"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/btn_submit"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Rules"
+        app:layout_constraintVertical_bias="0.621">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_top"
+        android:fontFamily="sans-serif-black"
+        android:text="Back"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toEndOf="@+id/btn_submitDepartment"
+        app:layout_constraintTop_toBottomOf="@+id/et_Rules"
+        app:layout_constraintVertical_bias="0.621">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

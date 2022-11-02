@@ -1,10 +1,19 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="MyBottomAppBar" parent="Widget.MaterialComponents.BottomAppBar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.BottomAppBar</item>
+    </style>
+
+    <style name="ThemeOverlay.BottomAppBar" parent="ThemeOverlay.MaterialComponents.BottomAppBar.Primary">
+        <item name="colorOnPrimary">@color/colorAccent</item>
     </style>
 
 </resources>

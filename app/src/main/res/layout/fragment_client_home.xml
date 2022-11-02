@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/client"
-    tools:context=".home.ClientHome">
+    tools:context=".presentation.screens.home.ClientHome">
 
 
-    <TextView
-        android:id="@+id/textView4"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_ClientHome"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
@@ -26,7 +26,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.091" />
 
-
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewClientHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_client_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

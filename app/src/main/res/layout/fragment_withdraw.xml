@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/deposit"
-    tools:context=".withDraw_Fragment.Withdraw">
+    tools:context=".presentation.screens.withDraw_Fragment.Withdraw">
 
 
     <TextView
         android:id="@+id/tvWelcomeWithdraw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/welcome_bank_withdraw"
         android:textColor="#0357AE"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +27,7 @@
         android:id="@+id/relativeLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="48dp"
         android:background="#63ABCD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,11 +53,13 @@
         </TextView>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="26dp"
-            android:layout_marginEnd="29dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="28dp"
             android:layout_toStartOf="@+id/tv_BalanceAmountWithdraw"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
@@ -71,12 +72,14 @@
         android:id="@+id/relativeLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="84dp"
         android:background="#63ABCD"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tvCurrentBalanceAmountWithdraw"
@@ -111,21 +114,17 @@
         android:id="@+id/cardView"
         android:layout_width="371dp"
         android:layout_height="238dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/btn_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+        app:layout_constraintStart_toStartOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_top"
-            android:backgroundTint="#63ABCD"
-            >
+            android:backgroundTint="#63ABCD">
 
 
             <EditText

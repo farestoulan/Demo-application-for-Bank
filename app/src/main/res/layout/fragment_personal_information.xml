@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.add.PersonalInformation">
+    tools:context=".presentation.screens.add.PersonalInformation">
 
     <TextView
         android:id="@+id/textView2"
@@ -54,7 +54,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_position"
+                android:hint="@string/hint_departments"
                 app:startIconDrawable="@drawable/icone"
                 >
 
@@ -85,8 +85,35 @@
                     android:drawablePadding="6dp"
                     android:inputType="number"
                     android:hint="@string/hint_number_years_of_experience"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
+            <RadioGroup
+                android:id="@+id/RadioG_IsActivation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <RadioButton
+                    android:id="@+id/radioB_EmployeeActivation"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/radio_button"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioB_AdminActivation"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Admin"
+                    android:textSize="16sp" />
+
+
+
+
+            </RadioGroup>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

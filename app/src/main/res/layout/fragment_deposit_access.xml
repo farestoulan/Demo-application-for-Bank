@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".deposit_Fragment.DepositAccess">
+    tools:context=".presentation.screens.deposit_Fragment.DepositAccess">
 
 
     <androidx.recyclerview.widget.RecyclerView
